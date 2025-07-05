@@ -14,15 +14,15 @@ This system was developed as part of my BSc Computer Engineering WRL (Work-Relat
 
 decision-support-system/
 
-app/ - Flask app and routes
+├──app/ - Flask app and routes
 
-frontend/ - Static frontend (Tailwind/Chart.js)
+├──frontend/ - Static frontend (Tailwind/Chart.js)
 
-datasets/ - CSV files used for training and prediction
+├──datasets/ - CSV files used for training and prediction
 
-models/ - Saved ML models
+├──models/ - Saved ML models
 
-run.py - Main app entry point
+├──run.py - Main app entry point
 
 
 ## 🚀 How to Run
