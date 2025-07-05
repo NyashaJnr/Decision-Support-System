@@ -13,11 +13,11 @@ This system was developed as part of my BSc Computer Engineering WRL (Work-Relat
 ## 📁 Project Structure
 
 decision-support-system/
-├── app/ - Flask app and routes
-├── frontend/ - Static frontend (Tailwind/Chart.js)
-├── datasets/ - CSV files used for training and prediction
-├── models/ - Saved ML models
-├── run.py - Main app entry point
+app/ - Flask app and routes
+frontend/ - Static frontend (Tailwind/Chart.js)
+datasets/ - CSV files used for training and prediction
+models/ - Saved ML models
+run.py - Main app entry point
 
 
 ## 🚀 How to Run
