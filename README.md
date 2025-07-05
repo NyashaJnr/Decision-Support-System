@@ -37,11 +37,6 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Start MongoDB:
-
-```bash
-# Make sure MongoDB is running on localhost:27017
-```
 
 ## Running the Application
 
