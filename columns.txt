@@ -1,0 +1,10 @@
+Procurement ID
+Item Name
+Category
+Supplier
+Order Quantity
+Unit Cost (USD)
+Total Cost (USD)
+Order Date
+Delivery Date
+Procurement Status

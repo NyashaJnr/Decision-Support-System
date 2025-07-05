@@ -1,39 +1,92 @@
-# READ ME
-# AI-Based Data-Driven Decision Support System
+# Mimosa Mining DSS
 
-This system was developed as part of my BSc Computer Engineering WRL (Work-Related Learning) program at the University of Zimbabwe. It supports informed managerial decisions using machine learning and analytics for departments such as HR, Finance, Supply Chain, and more.
+A web-based Decision Support System for Mimosa Mining Company, built with Flask, MongoDB, and Tailwind CSS.
 
-## 🔧 Features
+## Features
 
-- Predictive analytics (e.g., employee attrition, expense forecasting)
-- Department-specific dashboards (HR, Supply Chain, etc.)
-- Flask backend integrated with trained ML models
-- Tailwind CSS + Chart.js for frontend visualization
+- Data upload and storage
+- Interactive dashboard
+- Data visualization
+- Real-time data analysis
 
-## 📁 Project Structure
+## Prerequisites
 
-decision-support-system/
+- Python 3.8+
+- MongoDB
+- pip (Python package manager)
 
-├──app/ - Flask app and routes
+## Installation
 
-├──frontend/ - Static frontend (Tailwind/Chart.js)
-
-├──datasets/ - CSV files used for training and prediction
-
-├──models/ - Saved ML models
-
-├──run.py - Main app entry point
-
-
-## 🚀 How to Run
+1. Clone the repository:
 
 ```bash
-# Create a virtual environment
+git clone <repository-url>
+cd mimosa-dss
+```
+
+2. Create and activate a virtual environment:
+
+```bash
 python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-# Install dependencies
+3. Install dependencies:
+
+```bash
 pip install -r requirements.txt
+```
 
-# Run the Flask app
-python run.py
+4. Start MongoDB:
+
+```bash
+# Make sure MongoDB is running on localhost:27017
+```
+
+## Running the Application
+
+1. Start the Flask server:
+
+```bash
+cd backend
+python app.py
+```
+
+2. Open your browser and navigate to:
+
+```
+http://localhost:5000
+```
+
+## Usage
+
+1. Upload CSV data files through the web interface
+2. View data visualizations and summaries on the dashboard
+3. Analyze trends and patterns in the data
+
+## Project Structure
+
+```
+mimosa-dss/
+├── backend/
+│   ├── app.py
+│   ├── config.py
+│   └── data/
+├── frontend/
+│   ├── index.html
+│   ├── css/
+│   └── js/
+└── requirements.txt
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
