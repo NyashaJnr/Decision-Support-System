@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome to Mimosa DDS</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/welcome.css') }}"
+    />
+  </head>
+  <body>
+    <video autoplay muted playsinline id="welcomeVideo">
+      <source
+        src="{{ url_for('static', filename='video/welcome.mp4') }}"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <script src="{{ url_for('static', filename='scripts/welcome.js') }}"></script>
+  </body>
+</html>

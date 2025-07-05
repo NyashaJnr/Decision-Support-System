@@ -1,0 +1,209 @@
+{% extends "base.html" %} {% block content %}
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="h3 mb-4">
+        {{ current_user.department }} Department Analytics
+      </h1>
+    </div>
+  </div>
+
+  <!-- Department Performance Metrics -->
+  <div class="row mb-4">
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Efficiency Rate</h5>
+          <h2 class="card-text" id="efficiencyRate">--</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Task Completion</h5>
+          <h2 class="card-text" id="taskCompletion">--</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Resource Utilization</h5>
+          <h2 class="card-text" id="resourceUtilization">--</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Quality Score</h5>
+          <h2 class="card-text" id="qualityScore">--</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Department Charts -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Performance Trends</h5>
+          <canvas id="performanceChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Resource Allocation</h5>
+          <canvas id="resourceChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Activities -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Recent Department Activities</h5>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Activity</th>
+                  <th>Status</th>
+                  <th>Impact</th>
+                </tr>
+              </thead>
+              <tbody id="activitiesTable">
+                <!-- Activities will be populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-group mb-3">
+    <a
+      href="{{ url_for('download_report', department='department', format='csv') }}"
+      class="btn btn-success"
+    >
+      <i class="fas fa-file-csv me-2"></i>Download CSV
+    </a>
+    <a
+      href="{{ url_for('download_report', department='department', format='pdf') }}"
+      class="btn btn-warning"
+    >
+      <i class="fas fa-file-pdf me-2"></i>Download PDF
+    </a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Fetch department data
+    fetchDepartmentData();
+
+    // Set up charts
+    setupCharts();
+
+    // Fetch recent activities
+    fetchRecentActivities();
+  });
+
+  function fetchDepartmentData() {
+    fetch(`/api/department/${current_user.department}/metrics`)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("efficiencyRate").textContent =
+          data.efficiency + "%";
+        document.getElementById("taskCompletion").textContent =
+          data.taskCompletion + "%";
+        document.getElementById("resourceUtilization").textContent =
+          data.resourceUtilization + "%";
+        document.getElementById("qualityScore").textContent =
+          data.qualityScore + "%";
+      })
+      .catch((error) =>
+        console.error("Error fetching department data:", error)
+      );
+  }
+
+  function setupCharts() {
+    // Performance Trends Chart
+    const performanceCtx = document
+      .getElementById("performanceChart")
+      .getContext("2d");
+    new Chart(performanceCtx, {
+      type: "line",
+      data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        datasets: [
+          {
+            label: "Performance Score",
+            data: [65, 70, 75, 72, 80, 85],
+            borderColor: "#3498db",
+            tension: 0.1,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+      },
+    });
+
+    // Resource Allocation Chart
+    const resourceCtx = document
+      .getElementById("resourceChart")
+      .getContext("2d");
+    new Chart(resourceCtx, {
+      type: "doughnut",
+      data: {
+        labels: ["Human Resources", "Equipment", "Budget", "Time"],
+        datasets: [
+          {
+            data: [30, 25, 25, 20],
+            backgroundColor: ["#3498db", "#2ecc71", "#e74c3c", "#f1c40f"],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+      },
+    });
+  }
+
+  function fetchRecentActivities() {
+    fetch(`/api/department/${current_user.department}/activities`)
+      .then((response) => response.json())
+      .then((data) => {
+        const tableBody = document.getElementById("activitiesTable");
+        tableBody.innerHTML = data.activities
+          .map(
+            (activity) => `
+                <tr>
+                    <td>${activity.date}</td>
+                    <td>${activity.description}</td>
+                    <td><span class="badge bg-${
+                      activity.status === "Completed" ? "success" : "warning"
+                    }">${activity.status}</span></td>
+                    <td>${activity.impact}</td>
+                </tr>
+            `
+          )
+          .join("");
+      })
+      .catch((error) => console.error("Error fetching activities:", error));
+  }
+</script>
+{% endblock %}

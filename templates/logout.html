@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DDD Support System - Logout</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .logout-container {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+      }
+
+      .logo {
+        font-size: 48px;
+        font-weight: 700;
+        color: #667eea;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      .message {
+        color: #333;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 20px 0;
+      }
+
+      .sub-message {
+        color: #666;
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+
+      .login-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .login-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      }
+
+      .flash-messages {
+        margin-bottom: 20px;
+      }
+
+      .flash-message {
+        padding: 12px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      .flash-message.success {
+        background-color: #dcfce7;
+        color: #16a34a;
+        border: 1px solid #bbf7d0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logout-container">
+      <div class="logo">MIMOSA</div>
+
+      <h1 class="message">You have been logged out</h1>
+      <p class="sub-message">Thank you for using our system</p>
+      <a href="{{ url_for('login') }}" class="login-btn">Sign In Again</a>
+    </div>
+  </body>
+</html>

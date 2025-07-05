@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - DDSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/dashboard.css') }}">
+    <style>
+        .header-actions {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><span>USER MANAGEMENT</span></div>
+        <div class="nav-links">
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('uploads_bp.uploads') }}">Uploads</a>
+            <a href="{{ url_for('user_management_bp.user_management') }}" class="active">User Management</a>
+            <a href="{{ url_for('auth.logout') }}" class="logout-btn">Logout</a>
+        </div>
+    </nav>
+
+    <main class="container-fluid py-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>User Accounts</h1>
+            <div class="header-actions">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">
+                    <i class="fas fa-plus me-2"></i>Add User
+                </button>
+                <a href="{{ url_for('user_management_bp.download_users') }}" class="btn btn-success">
+                    <i class="fas fa-download me-2"></i>Download List
+                </a>
+            </div>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Email</th>
+                                <th>Department</th>
+                                <th>Role</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for user in users %}
+                            <tr>
+                                <td>{{ user.id }}</td>
+                                <td>{{ user.email }}</td>
+                                <td>{{ user.department }}</td>
+                                <td>{{ user.role }}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editUserModal-{{ user.id }}">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <form action="{{ url_for('user_management_bp.delete_user', user_id=user.id) }}" method="POST" class="d-inline">
+                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this user?');">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add User Modal -->
+    <div class="modal fade" id="addUserModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="{{ url_for('user_management_bp.add_user') }}" method="POST">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add New User</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password" name="password" required>
+                                <span class="input-group-text" id="togglePassword" style="cursor:pointer;"><i class="fa fa-eye"></i></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="department" class="form-label">Department</label>
+                            <select class="form-select" id="department" name="department" required>
+                                <option value="HR">HR</option>
+                                <option value="Sales">Sales</option>
+                                <option value="Production">Production</option>
+                                <option value="Supply Chain">Supply Chain</option>
+                                <option value="Transport">Transport</option>
+                                <option value="IT">IT</option>
+                                <option value="General Manager">General Manager</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="role" class="form-label">Role</label>
+                            <select class="form-select" id="role" name="role" required>
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add User</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit User Modals -->
+    {% for user in users %}
+    <div class="modal fade" id="editUserModal-{{ user.id }}" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="{{ url_for('user_management_bp.edit_user', user_id=user.id) }}" method="POST">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Edit User</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="email-{{ user.id }}" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email-{{ user.id }}" name="email" value="{{ user.email }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password-{{ user.id }}" class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password-{{ user.id }}" name="password">
+                                <span class="input-group-text togglePasswordEdit" data-target="password-{{ user.id }}" style="cursor:pointer;"><i class="fa fa-eye"></i></span>
+                            </div>
+                            <small class="text-muted">Leave blank to keep current password.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="department-{{ user.id }}" class="form-label">Department</label>
+                            <select class="form-select department-edit" id="department-{{ user.id }}" name="department" required>
+                                <option value="HR" {% if user.department == 'HR' %}selected{% endif %}>HR</option>
+                                <option value="Sales" {% if user.department == 'Sales' %}selected{% endif %}>Sales</option>
+                                <option value="Production" {% if user.department == 'Production' %}selected{% endif %}>Production</option>
+                                <option value="Supply Chain" {% if user.department == 'Supply Chain' %}selected{% endif %}>Supply Chain</option>
+                                <option value="Transport" {% if user.department == 'Transport' %}selected{% endif %}>Transport</option>
+                                <option value="Finance" {% if user.department == 'Finance' %}selected{% endif %}>Finance</option>
+                                <option value="IT" {% if user.department == 'IT' %}selected{% endif %}>IT</option>
+                                <option value="General Manager" {% if user.department == 'General Manager' %}selected{% endif %}>General Manager</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="role-{{ user.id }}" class="form-label">Role</label>
+                            <select class="form-select role-edit" id="role-{{ user.id }}" name="role" required data-userid="{{ user.id }}">
+                                <option value="user" {% if user.role == 'user' %}selected{% endif %}>User</option>
+                                <option value="admin" {% if user.role == 'admin' %}selected{% endif %}>Admin</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- Delete User Confirmation Modal -->
+    <div class="modal fade" id="deleteUserModal" tabindex="-1" aria-labelledby="deleteUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteUserModalLabel">Confirm Deletion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete the User?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteUserBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Show/hide password for add user
+    document.getElementById('togglePassword').addEventListener('click', function() {
+        const pwd = document.getElementById('password');
+        const icon = this.querySelector('i');
+        if (pwd.type === 'password') {
+            pwd.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            pwd.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
+    });
+
+    // Show/hide password for edit user
+    document.querySelectorAll('.togglePasswordEdit').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const targetId = btn.getAttribute('data-target');
+            const pwd = document.getElementById(targetId);
+            const icon = btn.querySelector('i');
+            if (pwd.type === 'password') {
+                pwd.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                pwd.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+    });
+
+    // Delete User Modal Logic
+    let deleteForm = null;
+    document.querySelectorAll('form[action*="delete_user"]').forEach(function(form) {
+        form.querySelector('button[type="submit"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            deleteForm = form;
+            var deleteModal = new bootstrap.Modal(document.getElementById('deleteUserModal'));
+            deleteModal.show();
+        });
+    });
+    document.getElementById('confirmDeleteUserBtn').addEventListener('click', function() {
+        if (deleteForm) deleteForm.submit();
+    });
+
+    // Department/Role logic for Add User
+    function handleRoleDepartment() {
+        const role = document.getElementById('role');
+        const department = document.getElementById('department');
+        const gmOption = Array.from(department.options).find(opt => opt.value === 'General Manager');
+        function updateDeptOptions() {
+            if (role.value === 'admin') {
+                if (gmOption && !department.contains(gmOption)) department.appendChild(gmOption);
+                department.value = 'General Manager';
+                department.disabled = true;
+            } else {
+                department.disabled = false;
+                if (gmOption) department.removeChild(gmOption);
+                if (department.value === 'General Manager') department.value = 'HR';
+            }
+        }
+        role.addEventListener('change', updateDeptOptions);
+        updateDeptOptions();
+    }
+    handleRoleDepartment();
+
+    // Department/Role logic for Edit User
+    document.querySelectorAll('.role-edit').forEach(function(roleSel) {
+        const userId = roleSel.getAttribute('data-userid');
+        const deptSel = document.getElementById('department-' + userId);
+        const gmOption = Array.from(deptSel.options).find(opt => opt.value === 'General Manager');
+        function updateEditDept() {
+            if (roleSel.value === 'admin') {
+                if (gmOption && !deptSel.contains(gmOption)) deptSel.appendChild(gmOption);
+                deptSel.value = 'General Manager';
+                deptSel.disabled = true;
+            } else {
+                deptSel.disabled = false;
+                if (gmOption) deptSel.removeChild(gmOption);
+                if (deptSel.value === 'General Manager') deptSel.value = 'HR';
+            }
+        }
+        roleSel.addEventListener('change', updateEditDept);
+        updateEditDept();
+    });
+    </script>
+</body>
+</html> 

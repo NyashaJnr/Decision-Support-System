@@ -1,0 +1,25 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  font-family: 'Segoe UI', sans-serif;
+  text-shadow: 2px 2px 4px #000;
+  z-index: 1;
+}

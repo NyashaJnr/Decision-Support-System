@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-theme="{{ current_user.theme if current_user.is_authenticated else 'light' }}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}DDD Support System{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Light theme (default) */
+      :root[data-theme="light"] {
+        --bg-primary: #ffffff;
+        --bg-secondary: #f3f4f6;
+        --text-primary: #1f2937;
+        --text-secondary: #4b5563;
+        --border-color: #e5e7eb;
+      }
+
+      /* Dark theme */
+      :root[data-theme="dark"] {
+        --bg-primary: #1f2937;
+        --bg-secondary: #111827;
+        --text-primary: #f9fafb;
+        --text-secondary: #d1d5db;
+        --border-color: #374151;
+      }
+
+      body {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+      }
+
+      .card {
+        background-color: var(--bg-secondary);
+        border-color: var(--border-color);
+      }
+
+      .form-control,
+      .form-select {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        border-color: var(--border-color);
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+      }
+
+      /* Font size classes */
+      .text-small {
+        font-size: 0.875rem;
+      }
+
+      .text-medium {
+        font-size: 1rem;
+      }
+
+      .text-large {
+        font-size: 1.125rem;
+      }
+    </style>
+
+    {% block extra_css %}{% endblock %}
+  </head>
+  <body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('auth.dashboard') }}">DDSS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            {% if current_user.is_authenticated %} {% if current_user.is_admin()
+            %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('auth.dashboard') }}"
+                >Dashboard</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('settings') }}">Settings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('what_if_analysis') }}"
+                >What If Analysis</a
+              >
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{{ url_for('auth.department_dashboard') }}"
+                >Department Analytics</a
+              >
+            </li>
+            {% endif %} {% endif %}
+          </ul>
+          <ul class="navbar-nav">
+            {% if current_user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('about') }}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %}
+    <div
+      class="alert alert-{{ category }} alert-dismissible fade show"
+      role="alert"
+    >
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+      {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container text-center">
+        <span class="text-muted"
+          >© 2024 DDD Support System. All rights reserved.</span
+        >
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <script>
+      // Theme switching functionality
+      function applyTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+      }
+
+      // Font size switching functionality
+      function applyFontSize(size) {
+        document.body.className = `text-${size}`;
+        localStorage.setItem("fontSize", size);
+      }
+
+      // Initialize theme and font size from user preferences
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedTheme =
+          localStorage.getItem("theme") ||
+          '{{ current_user.theme if current_user.is_authenticated else "light" }}';
+        const savedFontSize =
+          localStorage.getItem("fontSize") ||
+          '{{ current_user.font_size if current_user.is_authenticated else "medium" }}';
+
+        applyTheme(savedTheme);
+        applyFontSize(savedFontSize);
+      });
+
+      // Settings form submission
+      function saveSettings(endpoint, formData) {
+        fetch(endpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              // Apply theme changes immediately if they were updated
+              if (formData.theme) {
+                applyTheme(formData.theme);
+              }
+              // Apply font size changes immediately if they were updated
+              if (formData.font_size) {
+                applyFontSize(formData.font_size);
+              }
+              alert(data.message);
+            } else {
+              alert("Error: " + data.message);
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("An error occurred while saving settings");
+          });
+      }
+    </script>
+
+    {% block extra_js %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - DDD Support System</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/about.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <span>ABOUT US</span>
+      </div>
+      <div class="nav-links">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('analytics') }}">Analytics</a>
+        <a href="{{ url_for('about') }}" class="active">About</a>
+        <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+      </div>
+    </nav>
+
+    <main class="about-container">
+      <section class="hero-section">
+        <h1>Data-Driven Decision Support System</h1>
+        <p class="subtitle">
+          Empowering Decision Making Through Data-Driven Insights
+        </p>
+      </section>
+
+      <section class="content-section">
+        <div class="card">
+          <h2>Our Mission</h2>
+          <p>
+            Data-Driven Decision Support System is designed to revolutionize how
+            organizations make decisions by providing comprehensive, real-time
+            analytics and insights across all departments. We believe in the
+            power of data-driven decision making to drive efficiency,
+            innovation, and growth.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Key Features</h2>
+          <div class="features-grid">
+            <div class="feature-item">
+              <h3>Department Analytics</h3>
+              <p>
+                Comprehensive analytics for Supply Chain, Transport, HR,
+                Finance, Marketing, IT, Production, and Sales departments.
+              </p>
+            </div>
+            <div class="feature-item">
+              <h3>Real-time Monitoring</h3>
+              <p>
+                Track key performance indicators and metrics in real-time across
+                all departments.
+              </p>
+            </div>
+            <div class="feature-item">
+              <h3>Predictive Analytics</h3>
+              <p>
+                Leverage machine learning models to predict trends and make
+                informed decisions.
+              </p>
+            </div>
+            <div class="feature-item">
+              <h3>Customizable Dashboards</h3>
+              <p>
+                Personalize your view with customizable dashboards and reports.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Technology Stack</h2>
+          <div class="tech-stack">
+            <div class="tech-item">
+              <h3>Backend</h3>
+              <ul>
+                <li>Python</li>
+                <li>Flask</li>
+                <li>SQLite</li>
+                <li>Machine Learning Libraries</li>
+              </ul>
+            </div>
+            <div class="tech-item">
+              <h3>Frontend</h3>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Chart.js</li>
+              </ul>
+            </div>
+            <div class="tech-item">
+              <h3>Analytics</h3>
+              <ul>
+                <li>Data Analysis</li>
+                <li>Predictive Modeling</li>
+                <li>Statistical Analysis</li>
+                <li>Performance Metrics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Contact & Support</h2>
+          <div class="contact-info">
+            <p>For technical support or inquiries, please contact:</p>
+            <ul>
+              <li>Email: ddds@mimosa.co.zw</li>
+              <li>Phone: +263 777 217 361</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 DDD Support System. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

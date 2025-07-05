@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What If Analysis - DDSS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .navbar {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 1rem 2rem;
+      }
+
+      .nav-brand {
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+
+      .nav-links a {
+        color: #333;
+        text-decoration: none;
+        margin-left: 1.5rem;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #007bff;
+      }
+
+      .nav-links a.active {
+        color: #007bff;
+      }
+
+      .analysis-container {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .scenario-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .metric-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        transition: transform 0.3s ease;
+      }
+
+      .metric-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .chart-container {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .insight-card {
+        background: #f8f9fa;
+        border-left: 4px solid #007bff;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .form-label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      .btn-primary {
+        background-color: #007bff;
+        border: none;
+        padding: 0.5rem 1.5rem;
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+
+      .result-value {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #007bff;
+      }
+
+      .change-indicator {
+        font-size: 0.9rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+      }
+
+      .change-positive {
+        background-color: #d4edda;
+        color: #155724;
+      }
+
+      .change-negative {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <span>WHAT IF ANALYSIS</span>
+      </div>
+      <div class="nav-links">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('analytics') }}">Analytics</a>
+        <a href="{{ url_for('what_if_analysis') }}" class="active"
+          >What If Analysis</a
+        >
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+      </div>
+    </nav>
+
+    <div class="analysis-container">
+      <div class="row">
+        <!-- Scenario Input -->
+        <div class="col-md-4">
+          <div class="scenario-card">
+            <h3 class="mb-4">Create Scenario</h3>
+            <form id="scenarioForm">
+              <div class="mb-3">
+                <label class="form-label">Department</label>
+                <select class="form-select" id="department">
+                  <option value="it">IT</option>
+                  <option value="hr">HR</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="sales">Sales</option>
+                  <option value="production">Production</option>
+                  <option value="transport">Transport</option>
+                  <option value="supply_chain">Supply Chain</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Metric</label>
+                <select class="form-select" id="metric">
+                  <option value="delivery_time">Delivery Time</option>
+                  <option value="cost">Operational Cost</option>
+                  <option value="efficiency">Process Efficiency</option>
+                  <option value="satisfaction">Customer Satisfaction</option>
+                  <option value="revenue">Revenue Growth</option>
+                  <option value="productivity">Employee Productivity</option>
+                  <option value="quality">Service Quality</option>
+                  <option value="inventory">Inventory Turnover</option>
+                  <option value="maintenance">Equipment Maintenance</option>
+                  <option value="safety">Safety Incidents</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Change Percentage</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="changePercentage"
+                  placeholder="Enter percentage change"
+                  min="-100"
+                  max="100"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Analyze Scenario
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="col-md-8">
+          <div class="row">
+            <!-- Current vs Projected -->
+            <div class="col-md-6">
+              <div class="metric-card">
+                <h4>Current Value</h4>
+                <div class="result-value" id="currentValue">2.5h</div>
+                <p class="text-muted">Average delivery time</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="metric-card">
+                <h4>Projected Value</h4>
+                <div class="result-value" id="projectedValue">2.1h</div>
+                <div class="change-indicator change-positive">-16%</div>
+              </div>
+            </div>
+
+            <!-- Impact Chart -->
+            <div class="col-12">
+              <div class="chart-container">
+                <h4>Impact Analysis</h4>
+                <canvas id="impactChart"></canvas>
+              </div>
+            </div>
+
+            <!-- Insights -->
+            <div class="col-12">
+              <div class="insight-card">
+                <h5><i class="fas fa-lightbulb me-2"></i>Key Insights</h5>
+                <ul class="mb-0">
+                  <li>
+                    Reducing delivery time by 16% could increase customer
+                    satisfaction by 12%
+                  </li>
+                  <li>This change may require additional driver resources</li>
+                  <li>Expected cost impact: +8% in operational expenses</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Initialize the impact chart
+      const ctx = document.getElementById("impactChart").getContext("2d");
+      const impactChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [
+            "Customer Satisfaction",
+            "Operational Cost",
+            "Process Efficiency",
+            "Revenue Impact",
+            "Employee Productivity",
+            "Service Quality",
+          ],
+          datasets: [
+            {
+              label: "Impact Percentage",
+              data: [12, 8, -5, -16, 10, 7],
+              backgroundColor: [
+                "rgba(75, 192, 192, 0.6)",
+                "rgba(255, 99, 132, 0.6)",
+                "rgba(54, 162, 235, 0.6)",
+                "rgba(255, 206, 86, 0.6)",
+                "rgba(153, 102, 255, 0.6)",
+                "rgba(255, 159, 64, 0.6)",
+              ],
+              borderColor: [
+                "rgba(75, 192, 192, 1)",
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: "Impact Percentage (%)",
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return `Impact: ${context.raw}%`;
+                },
+              },
+            },
+          },
+        },
+      });
+
+      // Function to update insights based on department and metric
+      function updateInsights(department, metric, changePercentage) {
+        const insights = {
+          it: {
+            delivery_time: [
+              `System response time improvement of ${Math.abs(
+                changePercentage
+              )}% could increase user satisfaction by ${Math.abs(
+                changePercentage * 0.8
+              )}%`,
+              "Consider optimizing server configurations and network infrastructure",
+              `Expected impact on system performance: +${Math.abs(
+                changePercentage * 0.6
+              )}%`,
+            ],
+            cost: [
+              `IT infrastructure cost reduction of ${Math.abs(
+                changePercentage
+              )}% could affect system reliability by ${Math.abs(
+                changePercentage * 0.3
+              )}%`,
+              "Review cloud service utilization and hardware maintenance schedules",
+              `Potential efficiency gain: ${Math.abs(changePercentage * 0.4)}%`,
+            ],
+            efficiency: [
+              `Process automation improvement of ${Math.abs(
+                changePercentage
+              )}% could reduce manual tasks by ${Math.abs(
+                changePercentage * 0.7
+              )}%`,
+              "Consider implementing AI-based automation solutions",
+              `Expected productivity gain: ${Math.abs(
+                changePercentage * 0.9
+              )}%`,
+            ],
+          },
+          hr: {
+            satisfaction: [
+              `Employee satisfaction improvement of ${Math.abs(
+                changePercentage
+              )}% could increase retention by ${Math.abs(
+                changePercentage * 0.6
+              )}%`,
+              "Review employee engagement programs and work-life balance policies",
+              `Expected impact on productivity: +${Math.abs(
+                changePercentage * 0.5
+              )}%`,
+            ],
+            cost: [
+              `HR operational cost reduction of ${Math.abs(
+                changePercentage
+              )}% could affect service quality by ${Math.abs(
+                changePercentage * 0.3
+              )}%`,
+              "Optimize recruitment processes and training programs",
+              `Potential efficiency gain: ${Math.abs(changePercentage * 0.4)}%`,
+            ],
+            productivity: [
+              `Employee productivity improvement of ${Math.abs(
+                changePercentage
+              )}% could increase output by ${Math.abs(
+                changePercentage * 0.8
+              )}%`,
+              "Implement performance management and training initiatives",
+              `Expected impact on quality: +${Math.abs(
+                changePercentage * 0.6
+              )}%`,
+            ],
+          },
+          finance: {
+            revenue: [
+              `Revenue growth of ${Math.abs(
+                changePercentage
+              )}% could increase profit margins by ${Math.abs(
+                changePercentage * 0.4
+              )}%`,
+              "Review pricing strategies and cost optimization opportunities",
+              `Expected market share impact: +${Math.abs(
+                changePercentage * 0.3
+              )}%`,
+            ],
+            cost: [
+              `Cost reduction of ${Math.abs(
+                changePercentage
+              )}% could improve profit margins by ${Math.abs(
+                changePercentage * 0.8
+              )}%`,
+              "Analyze operational expenses and identify optimization opportunities",
+              `Potential efficiency gain: ${Math.abs(changePercentage * 0.5)}%`,
+            ],
+            efficiency: [
+              `Financial process efficiency improvement of ${Math.abs(
+                changePercentage
+              )}% could reduce processing time by ${Math.abs(
+                changePercentage * 0.7
+              )}%`,
+              "Consider implementing automated financial systems",
+              `Expected accuracy improvement: +${Math.abs(
+                changePercentage * 0.6
+              )}%`,
+            ],
+          },
+          marketing: {
+            revenue: [
+              `Marketing ROI improvement of ${Math.abs(
+                changePercentage
+              )}% could increase sales by ${Math.abs(changePercentage * 0.7)}%`,
+              "Optimize marketing channels and campaign strategies",
+              `Expected brand awareness impact: +${Math.abs(
+                changePercentage * 0.5
+              )}%`,
+            ],
+            satisfaction: [
+              `Customer satisfaction improvement of ${Math.abs(
+                changePercentage
+              )}% could increase brand loyalty by ${Math.abs(
+                changePercentage * 0.6
+              )}%`,
+              "Enhance customer engagement and feedback mechanisms",
+              `Expected impact on referrals: +${Math.abs(
+                changePercentage * 0.4
+              )}%`,
+            ],
+            efficiency: [
+              `Marketing efficiency improvement of ${Math.abs(
+                changePercentage
+              )}% could reduce campaign costs by ${Math.abs(
+                changePercentage * 0.5
+              )}%`,
+              "Implement data-driven marketing strategies",
+              `Expected conversion rate impact: +${Math.abs(
+                changePercentage * 0.3
+              )}%`,
+            ],
+          },
+          sales: {
+            revenue: [
+              `Sales growth of ${Math.abs(
+                changePercentage
+              )}% could increase market share by ${Math.abs(
+                changePercentage * 0.4
+              )}%`,
+              "Review sales strategies and customer acquisition costs",
+              `Expected profit impact: +${Math.abs(changePercentage * 0.6)}%`,
+            ],
+            efficiency: [
+              `Sales process efficiency improvement of ${Math.abs(
+                changePercentage
+              )}% could increase conversion rates by ${Math.abs(
+                changePercentage * 0.7
+              )}%`,
+              "Optimize sales pipeline and lead management",
+              `Expected impact on customer acquisition: +${Math.abs(
+                changePercentage * 0.5
+              )}%`,
+            ],
+            satisfaction: [
+              `Customer satisfaction improvement of ${Math.abs(
+                changePercentage
+              )}% could increase repeat business by ${Math.abs(
+                changePercentage * 0.8
+              )}%`,
+              "Enhance customer service and support processes",
+              `Expected impact on customer lifetime value: +${Math.abs(
+                changePercentage * 0.6
+              )}%`,
+            ],
+          },
+          production: {
+            efficiency: [
+              `Production efficiency improvement of ${Math.abs(
+                changePercentage
+              )}% could reduce costs by ${Math.abs(changePercentage * 0.6)}%`,
+              "Optimize production processes and resource allocation",
+              `Expected impact on quality: +${Math.abs(
+                changePercentage * 0.4
+              )}%`,
+            ],
+            cost: [
+              `Production cost reduction of ${Math.abs(
+                changePercentage
+              )}% could affect quality by ${Math.abs(changePercentage * 0.3)}%`,
+              "Review material usage and waste reduction strategies",
+              `Potential efficiency gain: ${Math.abs(changePercentage * 0.5)}%`,
+            ],
+            quality: [
+              `Quality improvement of ${Math.abs(
+                changePercentage
+              )}% could reduce defects by ${Math.abs(changePercentage * 0.7)}%`,
+              "Implement quality control measures and training",
+              `Expected impact on customer satisfaction: +${Math.abs(
+                changePercentage * 0.5
+              )}%`,
+            ],
+          },
+          transport: {
+            delivery_time: [
+              `Delivery time reduction of ${Math.abs(
+                changePercentage
+              )}% could increase customer satisfaction by ${Math.abs(
+                changePercentage * 0.8
+              )}%`,
+              "Optimize route planning and vehicle maintenance",
+              `Expected impact on operational costs: +${Math.abs(
+                changePercentage * 0.4
+              )}%`,
+            ],
+            cost: [
+              `Transport cost reduction of ${Math.abs(
+                changePercentage
+              )}% could affect service quality by ${Math.abs(
+                changePercentage * 0.3
+              )}%`,
+              "Review fuel efficiency and maintenance schedules",
+              `Potential efficiency gain: ${Math.abs(changePercentage * 0.5)}%`,
+            ],
+            efficiency: [
+              `Fleet efficiency improvement of ${Math.abs(
+                changePercentage
+              )}% could reduce operational costs by ${Math.abs(
+                changePercentage * 0.6
+              )}%`,
+              "Implement route optimization and vehicle tracking",
+              `Expected impact on delivery times: -${Math.abs(
+                changePercentage * 0.4
+              )}%`,
+            ],
+          },
+          supply_chain: {
+            efficiency: [
+              `Supply chain efficiency improvement of ${Math.abs(
+                changePercentage
+              )}% could reduce costs by ${Math.abs(changePercentage * 0.7)}%`,
+              "Optimize inventory management and supplier relationships",
+              `Expected impact on delivery times: -${Math.abs(
+                changePercentage * 0.5
+              )}%`,
+            ],
+            cost: [
+              `Supply chain cost reduction of ${Math.abs(
+                changePercentage
+              )}% could affect service levels by ${Math.abs(
+                changePercentage * 0.3
+              )}%`,
+              "Review procurement strategies and inventory levels",
+              `Potential efficiency gain: ${Math.abs(changePercentage * 0.5)}%`,
+            ],
+            inventory: [
+              `Inventory turnover improvement of ${Math.abs(
+                changePercentage
+              )}% could reduce holding costs by ${Math.abs(
+                changePercentage * 0.6
+              )}%`,
+              "Implement just-in-time inventory management",
+              `Expected impact on cash flow: +${Math.abs(
+                changePercentage * 0.4
+              )}%`,
+            ],
+          },
+        };
+
+        // Get insights for the selected department and metric
+        const departmentInsights = insights[department] || insights["it"];
+        const metricInsights = departmentInsights[metric] || [
+          `Change of ${Math.abs(
+            changePercentage
+          )}% could have significant impact on operations`,
+          "Consider reviewing current processes and resource allocation",
+          "Monitor key performance indicators closely",
+        ];
+
+        // Update the insights in the UI
+        const insightsList = document.querySelector(".insight-card ul");
+        insightsList.innerHTML = metricInsights
+          .map((insight) => `<li>${insight}</li>`)
+          .join("");
+      }
+
+      // Function to update chart data based on department and metric
+      function updateChartData(department, metric, changePercentage) {
+        const baseData = {
+          it: {
+            delivery_time: [15, -8, 12, -10, 20, 14],
+            cost: [-12, -15, 8, -10, 6, -8],
+            efficiency: [20, -10, 25, 15, 18, 22],
+          },
+          hr: {
+            satisfaction: [18, 12, -8, 15, 10, 14],
+            cost: [-10, -15, 6, -12, 4, -8],
+            productivity: [22, 15, -10, 18, 12, 16],
+          },
+          finance: {
+            revenue: [25, 18, -12, 20, 15, 22],
+            cost: [-15, -20, 10, -18, 8, -12],
+            efficiency: [20, -12, 28, 18, 15, 20],
+          },
+          marketing: {
+            revenue: [22, 15, -10, 18, 12, 16],
+            satisfaction: [20, 14, -8, 16, 10, 14],
+            efficiency: [18, -10, 24, 16, 12, 18],
+          },
+          sales: {
+            revenue: [24, 16, -12, 20, 14, 18],
+            efficiency: [20, -10, 26, 18, 14, 20],
+            satisfaction: [22, 15, -8, 18, 12, 16],
+          },
+          production: {
+            efficiency: [20, -12, 25, 18, 15, 20],
+            cost: [-15, -18, 10, -15, 8, -10],
+            quality: [18, 12, -8, 15, 10, 14],
+          },
+          transport: {
+            delivery_time: [20, -10, 15, -12, 18, 14],
+            cost: [-12, -15, 8, -10, 6, -8],
+            efficiency: [18, -8, 22, 16, 12, 18],
+          },
+          supply_chain: {
+            efficiency: [22, -10, 20, 15, 18, 20],
+            cost: [-15, -18, 10, -12, 8, -10],
+            inventory: [18, -12, 20, 15, 12, 16],
+          },
+        };
+
+        // Get data for the selected department and metric
+        const departmentData = baseData[department] || baseData["it"];
+        const metricData = departmentData[metric] || [10, 8, -5, -12, 7, 5];
+
+        // Update chart data
+        impactChart.data.datasets[0].data = metricData;
+        impactChart.update();
+      }
+
+      // Handle form submission
+      document
+        .getElementById("scenarioForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const department = document.getElementById("department").value;
+          const metric = document.getElementById("metric").value;
+          const changePercentage = parseFloat(
+            document.getElementById("changePercentage").value
+          );
+
+          // Update insights and chart
+          updateInsights(department, metric, changePercentage);
+          updateChartData(department, metric, changePercentage);
+
+          // Update current and projected values
+          const currentValue = document.getElementById("currentValue");
+          const projectedValue = document.getElementById("projectedValue");
+          const changeIndicator = document.querySelector(".change-indicator");
+
+          // Calculate new values based on department and metric
+          const baseValues = {
+            delivery_time: { current: "2.5h", unit: "h" },
+            cost: { current: "$1,200", unit: "$" },
+            efficiency: { current: "85%", unit: "%" },
+            satisfaction: { current: "4.2", unit: "" },
+            revenue: { current: "$50,000", unit: "$" },
+            productivity: { current: "92%", unit: "%" },
+          };
+
+          const metricInfo = baseValues[metric] || { current: "100", unit: "" };
+          const current = parseFloat(
+            metricInfo.current.replace(/[^0-9.-]+/g, "")
+          );
+          const projected = current * (1 + changePercentage / 100);
+
+          currentValue.textContent = `${metricInfo.current}`;
+          projectedValue.textContent = `${metricInfo.unit}${projected.toFixed(
+            1
+          )}`;
+
+          // Update change indicator
+          changeIndicator.textContent = `${
+            changePercentage > 0 ? "+" : ""
+          }${changePercentage}%`;
+          changeIndicator.className = `change-indicator ${
+            changePercentage >= 0 ? "change-positive" : "change-negative"
+          }`;
+        });
+    </script>
+  </body>
+</html>

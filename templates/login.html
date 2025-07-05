@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DDD Support System - Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .login-container {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        width: 100%;
+        max-width: 400px;
+        backdrop-filter: blur(10px);
+      }
+
+      .logo-container {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .logo {
+        font-size: 48px;
+        font-weight: 700;
+        color: #667eea;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      .company-name {
+        color: #333;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .tagline {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        color: #333;
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #e1e1e1;
+        border-radius: 10px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus {
+        border-color: #667eea;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      .remember-me {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .remember-me input {
+        margin-right: 8px;
+      }
+
+      .remember-me label {
+        color: #666;
+        font-size: 14px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      }
+
+      .flash-messages {
+        margin-bottom: 20px;
+      }
+
+      .flash-message {
+        padding: 12px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        animation: slideDown 0.5s ease-out;
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+
+      .flash-message.error {
+        background-color: #fee2e2;
+        color: #dc2626;
+        border: 1px solid #fecaca;
+      }
+
+      .flash-message.success {
+        background-color: #dcfce7;
+        color: #16a34a;
+        border: 1px solid #bbf7d0;
+      }
+
+      @keyframes slideDown {
+        from {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .login-container {
+          padding: 30px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="logo-container">
+        <div class="logo">MIMOSA</div>
+        <h1 class="company-name">Decision Support System</h1>
+        <p class="tagline">Empowering Supply Chain Excellence</p>
+      </div>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="flash-messages">
+            {% for category, message in messages %}
+              <div class="flash-message {{ category }}">{{ message }}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      <form method="POST" action="{{ url_for('auth.login') }}" id="loginForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" value="{{ email }}" required {% if cooldown %}disabled{% endif %}>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" value="{{ password }}" required {% if cooldown %}disabled{% endif %}>
+        </div>
+
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select id="role" name="role" required {% if cooldown %}disabled{% endif %}>
+            <option value="admin" {% if role == 'admin' %}selected{% endif %}>General Manager</option>
+            <option value="manager" {% if role == 'manager' %}selected{% endif %}>Departmental Manager</option>
+          </select>
+        </div>
+
+        <div class="cooldown-message" id="cooldownMessage" style="display: none;">
+          Please wait for <span id="countdown">30</span> seconds
+        </div>
+
+        <button type="submit" id="loginButton" {% if cooldown %}disabled{% endif %} class="submit-btn">Sign In</button>
+      </form>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loginForm = document.getElementById('loginForm');
+        const cooldownMessage = document.getElementById('cooldownMessage');
+        const countdownSpan = document.getElementById('countdown');
+        const loginButton = document.getElementById('loginButton');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const roleSelect = document.getElementById('role');
+
+        function startCooldown(seconds) {
+          cooldownMessage.style.display = 'block';
+          loginButton.disabled = true;
+          emailInput.disabled = true;
+          passwordInput.disabled = true;
+          roleSelect.disabled = true;
+
+          let timeLeft = seconds;
+          countdownSpan.textContent = timeLeft;
+
+          const countdownInterval = setInterval(() => {
+            timeLeft--;
+            countdownSpan.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+              clearInterval(countdownInterval);
+              checkCooldownStatus();
+            }
+          }, 1000);
+        }
+
+        function checkCooldownStatus() {
+          fetch('/check-cooldown')
+            .then(response => response.json())
+            .then(data => {
+              if (data.cooldown) {
+                startCooldown(data.remaining_time);
+              } else {
+                cooldownMessage.style.display = 'none';
+                loginButton.disabled = false;
+                emailInput.disabled = false;
+                passwordInput.disabled = false;
+                roleSelect.disabled = false;
+                // Clear any previous error messages
+                const flashMessages = document.querySelector('.flash-messages');
+                if (flashMessages) {
+                  flashMessages.innerHTML = '';
+                }
+                // Stop polling when cooldown is over
+                if (window.cooldownInterval) {
+                  clearInterval(window.cooldownInterval);
+                  window.cooldownInterval = null;
+                }
+              }
+            });
+        }
+
+        // Only start polling if there's a cooldown
+        {% if cooldown %}
+          startCooldown({{ remaining_time }});
+          window.cooldownInterval = setInterval(checkCooldownStatus, 1000);
+        {% endif %}
+
+        // Add event listener for failed login attempts
+        loginForm.addEventListener('submit', function(e) {
+          const flashMessages = document.querySelector('.flash-messages');
+          if (flashMessages && flashMessages.querySelector('.error')) {
+            // If there's an error message, start checking cooldown
+            if (!window.cooldownInterval) {
+              window.cooldownInterval = setInterval(checkCooldownStatus, 1000);
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

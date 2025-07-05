@@ -1,0 +1,480 @@
+{% extends "base_dashboard.html" %} {% block title %}Transport Analytics
+Dashboard{% endblock %} {% block page_title %}
+<div class="flex justify-between items-center">
+  <span>Transport Analytics Dashboard</span>
+  <div>
+    <div class="btn-group mb-3">
+      <a
+        href="{{ url_for('download_report', department='transport', format='csv') }}"
+        class="btn btn-success"
+      >
+        <i class="fas fa-file-csv me-2"></i>Download CSV
+      </a>
+      <a
+        href="{{ url_for('download_report', department='transport', format='pdf') }}"
+        class="btn btn-warning"
+      >
+        <i class="fas fa-file-pdf me-2"></i>Download PDF
+      </a>
+    </div>
+    <a href="/analytics" class="btn btn-secondary">
+      <i class="fas fa-arrow-left"></i> Back to Analytics
+    </a>
+  </div>
+</div>
+{% endblock %} {% block content %}
+<!-- Key Metrics -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+  <div class="bg-white rounded-lg shadow p-6">
+    <h3 class="text-lg font-semibold text-gray-700 mb-2">Total Deliveries</h3>
+    <p class="text-3xl font-bold text-blue-600">
+      {{ metrics.total_deliveries|default(0) }}
+    </p>
+    <p class="text-sm text-gray-500">Total deliveries made</p>
+  </div>
+  <div class="bg-white rounded-lg shadow p-6">
+    <h3 class="text-lg font-semibold text-gray-700 mb-2">
+      Average Delivery Time
+    </h3>
+    <p class="text-3xl font-bold text-blue-600">
+      {{ metrics.avg_delivery_time|default(0)|round(1) }} hrs
+    </p>
+    <p class="text-sm text-gray-500">Average delivery duration</p>
+  </div>
+  <div class="bg-white rounded-lg shadow p-6">
+    <h3 class="text-lg font-semibold text-gray-700 mb-2">On-Time Rate</h3>
+    <p class="text-3xl font-bold text-blue-600">
+      {{ metrics.avg_on_time_rate|default(0)|round(1) }}%
+    </p>
+    <p class="text-sm text-gray-500">On-time delivery rate</p>
+  </div>
+  <div class="bg-white rounded-lg shadow p-6">
+    <h3 class="text-lg font-semibold text-gray-700 mb-2">Total Incidents</h3>
+    <p class="text-3xl font-bold text-blue-600">
+      {{ metrics.total_incidents|default(0) }}
+    </p>
+    <p class="text-sm text-gray-500">Total incidents reported</p>
+  </div>
+</div>
+
+<!-- Transport Analysis -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+  <div class="bg-white rounded-lg shadow p-6">
+    <h3 class="text-lg font-semibold text-gray-700 mb-4">
+      Vehicle Type Distribution
+    </h3>
+    <div class="h-80">
+      <canvas id="vehicleTypeChart"></canvas>
+    </div>
+  </div>
+  <div class="bg-white rounded-lg shadow p-6">
+    <h3 class="text-lg font-semibold text-gray-700 mb-4">Role Distribution</h3>
+    <div class="h-80">
+      <canvas id="roleDistributionChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- Performance Trends -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+  <div class="bg-white rounded-lg shadow p-6">
+    <h3 class="text-lg font-semibold text-gray-700 mb-4">
+      Performance by Vehicle Type
+    </h3>
+    <div class="h-80">
+      <canvas id="vehiclePerformanceChart"></canvas>
+    </div>
+  </div>
+  <div class="bg-white rounded-lg shadow p-6">
+    <h3 class="text-lg font-semibold text-gray-700 mb-4">Monthly Trends</h3>
+    <div class="h-80">
+      <canvas id="monthlyTrendsChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- Model Performance -->
+<div class="bg-white rounded-lg shadow p-6 mb-6">
+  <h3 class="text-lg font-semibold text-gray-700 mb-4">Model Performance</h3>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-blue-50 rounded-lg p-4">
+      <h4 class="text-md font-semibold text-blue-800 mb-2">
+        Delivery Time Prediction
+      </h4>
+      <div class="space-y-2">
+        <p class="text-sm text-blue-700">
+          <span class="font-medium">R² Score:</span> {{
+          model_performance.delivery_time.r2_score|default(0)|round(3) }}
+        </p>
+        <p class="text-sm text-blue-700">
+          <span class="font-medium">MSE:</span> {{
+          model_performance.delivery_time.mse|default(0)|round(3) }}
+        </p>
+      </div>
+    </div>
+    <div class="bg-green-50 rounded-lg p-4">
+      <h4 class="text-md font-semibold text-green-800 mb-2">
+        Fuel Consumption Prediction
+      </h4>
+      <div class="space-y-2">
+        <p class="text-sm text-green-700">
+          <span class="font-medium">R² Score:</span> {{
+          model_performance.fuel_consumption.r2_score|default(0)|round(3) }}
+        </p>
+        <p class="text-sm text-green-700">
+          <span class="font-medium">MSE:</span> {{
+          model_performance.fuel_consumption.mse|default(0)|round(3) }}
+        </p>
+      </div>
+    </div>
+    <div class="bg-purple-50 rounded-lg p-4">
+      <h4 class="text-md font-semibold text-purple-800 mb-2">
+        Incident Prediction
+      </h4>
+      <div class="space-y-2">
+        <p class="text-sm text-purple-700">
+          <span class="font-medium">R² Score:</span> {{
+          model_performance.incident_prediction.r2_score|default(0)|round(3) }}
+        </p>
+        <p class="text-sm text-purple-700">
+          <span class="font-medium">MSE:</span> {{
+          model_performance.incident_prediction.mse|default(0)|round(3) }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Attrition Model Performance Chart (if classification_report available) -->
+{% if ml_results and ml_results.classification_report %}
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+  <div class="bg-white rounded-lg shadow p-6">
+    <h4 class="text-lg font-semibold text-gray-700 mb-4">
+      Attrition Model Performance
+    </h4>
+    <canvas id="attritionPerformanceChart"></canvas>
+  </div>
+</div>
+<script>
+  new Chart(document.getElementById('attritionPerformanceChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Stayed', 'Resigned'],
+      datasets: [
+        {
+          label: 'Precision',
+          backgroundColor: '#4e79a7',
+          data: [
+            {{ ml_results.classification_report['0']['precision']|default(0) }},
+            {{ ml_results.classification_report['1']['precision']|default(0) }}
+          ]
+        },
+        {
+          label: 'Recall',
+          backgroundColor: '#59a14f',
+          data: [
+            {{ ml_results.classification_report['0']['recall']|default(0) }},
+            {{ ml_results.classification_report['1']['recall']|default(0) }}
+          ]
+        },
+        {
+          label: 'F1-Score',
+          backgroundColor: '#f28e2b',
+          data: [
+            {{ ml_results.classification_report['0']['f1-score']|default(0) }},
+            {{ ml_results.classification_report['1']['f1-score']|default(0) }}
+          ]
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        title: { display: true, text: 'Attrition Model Performance' }
+      }
+    }
+  });
+</script>
+{% endif %}
+
+<!-- Analysis & Recommendations -->
+<div class="bg-white rounded-lg shadow p-6 mb-6">
+  <h3 class="text-lg font-semibold text-gray-700 mb-4">
+    Analysis & Recommendations
+  </h3>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <!-- Key Insights -->
+    <div>
+      <h4 class="text-md font-semibold text-gray-600 mb-3">Key Insights</h4>
+      <div class="space-y-4">
+        {% for insight in analysis.insights %}
+        <div class="bg-blue-50 rounded-lg p-4">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg
+                class="h-5 w-5 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h5 class="text-sm font-medium text-blue-800">
+                {{ insight.title|title }}
+              </h5>
+              <p class="mt-1 text-sm text-blue-700">
+                {{ insight.description }}
+              </p>
+              {% if insight.impact %}
+              <div class="mt-2 text-sm text-blue-600">
+                <span class="font-medium">Impact:</span> {{ insight.impact }}
+              </div>
+              {% endif %} {% if insight.trend %}
+              <div class="mt-1 text-sm text-blue-600">
+                <span class="font-medium">Trend:</span> {{ insight.trend }}
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Actionable Recommendations -->
+    <div>
+      <h4 class="text-md font-semibold text-gray-600 mb-3">
+        Actionable Recommendations
+      </h4>
+      <div class="space-y-4">
+        {% for recommendation in analysis.recommendations %}
+        <div class="bg-green-50 rounded-lg p-4">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg
+                class="h-5 w-5 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h5 class="text-sm font-medium text-green-800">
+                {{ recommendation.title|title }}
+              </h5>
+              <p class="mt-1 text-sm text-green-700">
+                {{ recommendation.description }}
+              </p>
+              {% if recommendation.priority %}
+              <div class="mt-2 text-sm text-green-600">
+                <span class="font-medium">Priority:</span> {{
+                recommendation.priority }}
+              </div>
+              {% endif %} {% if recommendation.expected_impact %}
+              <div class="mt-1 text-sm text-green-600">
+                <span class="font-medium">Expected Impact:</span> {{
+                recommendation.expected_impact }}
+              </div>
+              {% endif %} {% if recommendation.implementation_time %}
+              <div class="mt-1 text-sm text-green-600">
+                <span class="font-medium">Implementation Time:</span> {{
+                recommendation.implementation_time }}
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Recent Entries -->
+<div class="bg-white rounded-lg shadow p-6">
+  <h3 class="text-lg font-semibold text-gray-700 mb-4">
+    Recent Transport Entries
+  </h3>
+  <div class="overflow-x-auto">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+          >
+            Date
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+          >
+            Vehicle
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+          >
+            Driver
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+          >
+            Route
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+          >
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        {% for entry in recent_entries %}
+        <tr>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+            {{ entry.date }}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+            {{ entry.vehicle }}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+            {{ entry.driver }}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+            {{ entry.route }}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap">
+            <span
+              class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full {% if entry.status == 'Completed' %}bg-green-100 text-green-800 {% elif entry.status == 'In Progress' %}bg-blue-100 text-blue-800 {% elif entry.status == 'Delayed' %}bg-red-100 text-red-800 {% else %}bg-gray-100 text-gray-800{% endif %}"
+            >
+              {{ entry.status }}
+            </span>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %} {% block scripts %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Vehicle Type Distribution Chart
+      const vehicleTypeCtx = document.getElementById('vehicleTypeChart').getContext('2d');
+      new Chart(vehicleTypeCtx, {
+          type: 'pie',
+          data: {
+              labels: Object.keys({{ distributions.vehicle_types|tojson }}),
+              datasets: [{
+                  data: Object.values({{ distributions.vehicle_types|tojson }}),
+                  backgroundColor: [
+                      '#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6',
+                      '#EC4899', '#14B8A6', '#F97316', '#6366F1', '#84CC16'
+                  ]
+              }]
+          },
+          options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                  legend: {
+                      position: 'right'
+                  }
+              }
+          }
+      });
+
+      // Role Distribution Chart
+      const roleDistributionCtx = document.getElementById('roleDistributionChart').getContext('2d');
+      new Chart(roleDistributionCtx, {
+          type: 'pie',
+          data: {
+              labels: Object.keys({{ distributions.roles|tojson }}),
+              datasets: [{
+                  data: Object.values({{ distributions.roles|tojson }}),
+                  backgroundColor: [
+                      '#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6',
+                      '#EC4899', '#14B8A6', '#F97316', '#6366F1', '#84CC16'
+                  ]
+              }]
+          },
+          options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                  legend: {
+                      position: 'right'
+                  }
+              }
+          }
+      });
+
+      // Vehicle Performance Chart
+      const vehiclePerformanceCtx = document.getElementById('vehiclePerformanceChart').getContext('2d');
+      new Chart(vehiclePerformanceCtx, {
+          type: 'bar',
+          data: {
+              labels: Object.keys({{ performance.by_vehicle_type|tojson }}),
+              datasets: [{
+                  label: 'Performance Score',
+                  data: Object.values({{ performance.by_vehicle_type|tojson }}),
+                  backgroundColor: '#10B981'
+              }]
+          },
+          options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                  y: {
+                      beginAtZero: true,
+                      max: 100
+                  }
+              }
+          }
+      });
+
+      // Monthly Trends Chart
+      const monthlyTrendsCtx = document.getElementById('monthlyTrendsChart').getContext('2d');
+      new Chart(monthlyTrendsCtx, {
+          type: 'line',
+          data: {
+              labels: Object.keys({{ trends|tojson }}),
+              datasets: [{
+                  label: 'Delivery Time',
+                  data: Object.values({{ trends|tojson }}).map(t => t.delivery_time),
+                  borderColor: '#3B82F6',
+                  tension: 0.4,
+                  fill: false
+              }, {
+                  label: 'On-Time Rate',
+                  data: Object.values({{ trends|tojson }}).map(t => t.on_time_rate),
+                  borderColor: '#10B981',
+                  tension: 0.4,
+                  fill: false
+              }]
+          },
+          options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+  });
+</script>
+{% endblock %}
