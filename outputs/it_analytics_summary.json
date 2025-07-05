@@ -1,0 +1,201 @@
+{
+    "metrics": {
+        "total_tickets": 200,
+        "avg_resolution_time": 24.215899999999998,
+        "first_call_resolution": 0.0,
+        "system_uptime": 99.9
+    },
+    "distributions": {
+        "ticket_types": {
+            "Update failure": 33,
+            "Security breach": 28,
+            "System crash": 28,
+            "Data loss": 26,
+            "Downtime": 24,
+            "Login failure": 22,
+            "Slow performance": 21,
+            "Access Denied": 18
+        },
+        "systems": {
+            "Email Server": 41,
+            "HRM System": 34,
+            "Antivirus": 27,
+            "Backup Server": 27,
+            "Firewall": 23,
+            "Intranet": 16,
+            "ERP": 16,
+            "CRM": 16
+        },
+        "status": {
+            "Pending": 52,
+            "Resolved": 45,
+            "Closed": 37,
+            "Escalated": 35,
+            "In Progress": 31
+        }
+    },
+    "trends": {
+        "1": 22.135238095238094,
+        "2": 28.772142857142857,
+        "3": 22.33764705882353,
+        "4": 24.5425,
+        "5": 23.135833333333334,
+        "6": 24.34888888888889,
+        "7": 22.04,
+        "8": 24.478235294117646,
+        "9": 21.486153846153847,
+        "10": 23.177142857142854,
+        "11": 25.365454545454543,
+        "12": 26.941363636363636
+    },
+    "performance": {
+        "by_system": {
+            "Antivirus": 23.578888888888887,
+            "Backup Server": 27.39,
+            "CRM": 24.338124999999998,
+            "ERP": 26.211875,
+            "Email Server": 21.18609756097561,
+            "Firewall": 24.73086956521739,
+            "HRM System": 26.006176470588233,
+            "Intranet": 21.035625
+        },
+        "by_issue": {
+            "Access Denied": 23.81222222222222,
+            "Data loss": 25.768846153846155,
+            "Downtime": 22.795,
+            "Login failure": 24.681818181818183,
+            "Security breach": 24.22714285714286,
+            "Slow performance": 20.554285714285715,
+            "System crash": 23.486428571428572,
+            "Update failure": 26.874848484848485
+        }
+    },
+    "model_performance": {
+        "mse": 231.79511742618743,
+        "r2": -0.3122420764905518
+    },
+    "analysis": {
+        "insights": [
+            "Average resolution time is 24.2 hours",
+            "First call resolution rate is 0.0%",
+            "Most common issue is Update failure"
+        ],
+        "recommendations": [
+            "Implement automated ticket routing based on system and issue type",
+            "Develop self-service portal for common issues",
+            "Enhance knowledge base with frequently asked questions"
+        ]
+    },
+    "recent_tickets": [
+        {
+            "Employee ID": 3451,
+            "System Name": "ERP",
+            "Issue Reported": "Update failure",
+            "Reported Date": "2025-05-13 00:00:00",
+            "Resolution Time (hrs)": 46.36,
+            "Technician Assigned": "Jon Dunn",
+            "Status": "In Progress",
+            "Month": 5,
+            "Day_of_Week": 1
+        },
+        {
+            "Employee ID": 5213,
+            "System Name": "Email Server",
+            "Issue Reported": "Slow performance",
+            "Reported Date": "2025-05-05 00:00:00",
+            "Resolution Time (hrs)": 15.83,
+            "Technician Assigned": "Walter Hawkins",
+            "Status": "Resolved",
+            "Month": 5,
+            "Day_of_Week": 0
+        },
+        {
+            "Employee ID": 9633,
+            "System Name": "Backup Server",
+            "Issue Reported": "Downtime",
+            "Reported Date": "2025-04-25 00:00:00",
+            "Resolution Time (hrs)": 21.61,
+            "Technician Assigned": "Nicole Stewart",
+            "Status": "Resolved",
+            "Month": 4,
+            "Day_of_Week": 4
+        },
+        {
+            "Employee ID": 2286,
+            "System Name": "Backup Server",
+            "Issue Reported": "Login failure",
+            "Reported Date": "2025-04-20 00:00:00",
+            "Resolution Time (hrs)": 12.62,
+            "Technician Assigned": "Valerie Howard",
+            "Status": "Pending",
+            "Month": 4,
+            "Day_of_Week": 6
+        },
+        {
+            "Employee ID": 5733,
+            "System Name": "HRM System",
+            "Issue Reported": "Security breach",
+            "Reported Date": "2025-04-17 00:00:00",
+            "Resolution Time (hrs)": 13.31,
+            "Technician Assigned": "Kathleen Stanley",
+            "Status": "Pending",
+            "Month": 4,
+            "Day_of_Week": 3
+        },
+        {
+            "Employee ID": 3400,
+            "System Name": "Intranet",
+            "Issue Reported": "Downtime",
+            "Reported Date": "2025-04-16 00:00:00",
+            "Resolution Time (hrs)": 16.27,
+            "Technician Assigned": "Rodney Butler",
+            "Status": "In Progress",
+            "Month": 4,
+            "Day_of_Week": 2
+        },
+        {
+            "Employee ID": 6079,
+            "System Name": "Email Server",
+            "Issue Reported": "Data loss",
+            "Reported Date": "2025-04-14 00:00:00",
+            "Resolution Time (hrs)": 43.92,
+            "Technician Assigned": "Chad Jordan",
+            "Status": "In Progress",
+            "Month": 4,
+            "Day_of_Week": 0
+        },
+        {
+            "Employee ID": 2322,
+            "System Name": "Backup Server",
+            "Issue Reported": "Access Denied",
+            "Reported Date": "2025-04-10 00:00:00",
+            "Resolution Time (hrs)": 13.78,
+            "Technician Assigned": "Melanie Wilson",
+            "Status": "Closed",
+            "Month": 4,
+            "Day_of_Week": 3
+        },
+        {
+            "Employee ID": 9420,
+            "System Name": "Intranet",
+            "Issue Reported": "Data loss",
+            "Reported Date": "2025-04-09 00:00:00",
+            "Resolution Time (hrs)": 19.38,
+            "Technician Assigned": "Katelyn Palmer",
+            "Status": "Pending",
+            "Month": 4,
+            "Day_of_Week": 2
+        },
+        {
+            "Employee ID": 6851,
+            "System Name": "Email Server",
+            "Issue Reported": "System crash",
+            "Reported Date": "2025-04-04 00:00:00",
+            "Resolution Time (hrs)": 38.07,
+            "Technician Assigned": "Connor Bell",
+            "Status": "Resolved",
+            "Month": 4,
+            "Day_of_Week": 4
+        }
+    ]
+}

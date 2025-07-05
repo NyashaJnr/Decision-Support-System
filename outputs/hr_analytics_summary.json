@@ -1,0 +1,44 @@
+{
+    "classification_report": {
+        "0": {
+            "precision": 0.5238095238095238,
+            "recall": 0.4782608695652174,
+            "f1-score": 0.5,
+            "support": 23.0
+        },
+        "1": {
+            "precision": 0.4,
+            "recall": 0.4444444444444444,
+            "f1-score": 0.42105263157894735,
+            "support": 18.0
+        },
+        "accuracy": 0.4634146341463415,
+        "macro avg": {
+            "precision": 0.46190476190476193,
+            "recall": 0.4613526570048309,
+            "f1-score": 0.4605263157894737,
+            "support": 41.0
+        },
+        "weighted avg": {
+            "precision": 0.46945412311265966,
+            "recall": 0.4634146341463415,
+            "f1-score": 0.4653401797175866,
+            "support": 41.0
+        }
+    },
+    "regression_metrics": {
+        "mse": 0.8224343015698345,
+        "r2_score": -0.004155552141164032
+    },
+    "clustering": {
+        "optimal_clusters": 2,
+        "cluster_distribution": {
+            "0": 102,
+            "1": 98
+        },
+        "cluster_plot": "outputs/resource_clusters.png"
+    },
+    "training_recommendations_count": 38,
+    "attrition_predictions_csv": "outputs/attrition_predictions.csv",
+    "performance_predictions_csv": "outputs/performance_predictions.csv"
+}

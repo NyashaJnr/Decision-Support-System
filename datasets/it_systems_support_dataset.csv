@@ -1,0 +1,201 @@
+Employee ID,System Name,Issue Reported,Reported Date,Resolution Time (hrs),Technician Assigned,Status
+8542,Backup Server,Security breach,2024-01-19,32.41,Lisa Romero DDS,Escalated
+8941,Intranet,Slow performance,2023-08-07,8.69,Richard Ramsey,Pending
+6645,Email Server,System crash,2024-12-22,43.82,John Kelley,Pending
+1310,Firewall,Update failure,2023-03-26,3.49,Barbara Thompson,Escalated
+9920,Firewall,Update failure,2023-09-22,23.38,Jennifer Griffith,Resolved
+1449,Intranet,Login failure,2023-10-16,17.66,Michael Brown,Pending
+5213,Email Server,Slow performance,2025-05-05,15.83,Walter Hawkins,Resolved
+6038,HRM System,Slow performance,2023-08-26,2.16,Debbie Hill,Escalated
+6617,Firewall,Downtime,2025-02-25,39.43,Leonard Rosales,Pending
+1943,Firewall,Slow performance,2022-09-01,5.73,Philip Smith,In Progress
+9853,Intranet,Login failure,2025-03-14,16.04,Shelley Howard DVM,Resolved
+1925,ERP,Security breach,2024-02-01,31.93,Jennifer Cook,Closed
+5256,Firewall,Security breach,2024-11-26,39.82,Wanda Dawson,Pending
+8729,Firewall,System crash,2023-10-16,43.44,Reginald Farrell,Escalated
+3188,HRM System,Update failure,2024-07-12,21.48,Donna Munoz,Closed
+4473,Intranet,Access Denied,2024-12-29,7.84,Angela Sutton,Resolved
+4809,Firewall,Slow performance,2023-10-16,7.3,David Jennings,Pending
+5630,HRM System,Data loss,2023-12-24,19.56,Mikayla Cruz,Resolved
+1482,HRM System,Data loss,2022-08-19,20.58,Marie Stevens,Pending
+3358,Email Server,Update failure,2024-12-05,43.25,David Bryant,Pending
+9420,Intranet,Data loss,2025-04-09,19.38,Katelyn Palmer,Pending
+7534,Antivirus,Data loss,2023-01-31,31.17,Erika Leon,Resolved
+4110,ERP,Access Denied,2022-12-05,43.84,April Soto,Pending
+6121,Antivirus,Data loss,2022-05-21,2.03,Paul Martin,Pending
+7553,ERP,System crash,2024-09-02,11.82,Patricia Shelton,Pending
+4111,HRM System,Downtime,2022-10-04,41.35,Alexandria Davis,Pending
+9099,HRM System,Security breach,2025-03-17,41.36,Susan Warner,Resolved
+9092,Backup Server,Downtime,2023-10-25,14.01,Susan Hogan,Pending
+4046,Antivirus,Access Denied,2023-07-12,18.46,Peggy Brooks,Resolved
+9528,ERP,System crash,2024-08-25,28.53,Jeffery Ortega,Resolved
+1932,Firewall,Login failure,2024-12-28,13.97,Jason Gomez,Closed
+6395,Backup Server,Login failure,2023-03-17,30.72,Miranda Hayes,Resolved
+6164,HRM System,Update failure,2022-07-04,25.08,Daniel Weaver,Escalated
+8042,Email Server,Security breach,2023-04-19,20.83,Paul Liu,Pending
+2436,Email Server,Login failure,2024-10-31,29.57,Wayne Wolfe,Escalated
+6474,Intranet,System crash,2023-04-16,43.47,Dana Campbell,In Progress
+8703,Firewall,System crash,2024-12-07,46.63,Susan Curtis,Pending
+3747,Intranet,Downtime,2023-12-18,32.98,Gene Wallace,Escalated
+5153,HRM System,Update failure,2023-01-04,11.26,Michael Baird,Resolved
+1058,Email Server,Update failure,2022-11-21,12.86,Brian Spencer,Closed
+6502,CRM,Data loss,2024-12-27,30.47,Deanna Brooks,Resolved
+6468,Email Server,Security breach,2024-08-14,45.86,Amy Chavez,Escalated
+5724,Email Server,Update failure,2024-09-05,26.15,Marc Gill,Resolved
+8894,CRM,Access Denied,2022-11-20,44.58,Ryan Johnson,Closed
+4392,CRM,Update failure,2022-08-14,4.12,Debbie Herring,Pending
+5696,Email Server,Downtime,2022-12-04,16.97,Edward Henry,Closed
+4083,Backup Server,Update failure,2022-07-04,36.03,Nancy Harrison,Resolved
+1226,Antivirus,Login failure,2023-06-27,2.46,Ricardo Weaver Jr.,Pending
+6496,Firewall,Downtime,2024-01-23,18.56,Rhonda Schaefer,Escalated
+5482,Intranet,Login failure,2025-03-28,15.12,Lauren Klein,Resolved
+5998,ERP,Security breach,2025-03-17,37.15,Lindsey Acosta,Resolved
+3352,Antivirus,Slow performance,2025-01-07,3.6,Mary Wright,Resolved
+1938,Firewall,Slow performance,2023-08-27,23.39,Alicia Robinson,Escalated
+3620,Email Server,Downtime,2024-01-04,11.91,Benjamin Edwards,Resolved
+3788,HRM System,Data loss,2024-10-25,34.69,Rebecca Brandt,Resolved
+9557,Firewall,Data loss,2022-05-15,14.31,Chelsey Sandoval,Resolved
+1671,CRM,Security breach,2024-03-08,8.28,Megan Weaver,In Progress
+8739,HRM System,Downtime,2025-03-05,31.91,Angela Ochoa,In Progress
+3790,Antivirus,Update failure,2023-12-15,32.26,Sara Chavez,Closed
+4647,HRM System,Update failure,2024-08-24,44.94,Dr. Adam Gomez,Pending
+6899,HRM System,Login failure,2023-11-24,29.84,Kari Bentley,Pending
+5642,ERP,Access Denied,2024-08-20,18.88,Tonya Sanchez,Closed
+5733,HRM System,Security breach,2025-04-17,13.31,Kathleen Stanley,Pending
+6243,CRM,System crash,2024-09-04,13.55,Olivia Smith,Pending
+4348,HRM System,Slow performance,2023-06-16,20.04,David Wilson,Closed
+2597,Antivirus,Downtime,2024-07-21,25.46,Brian Small,Resolved
+3994,Backup Server,System crash,2024-05-31,46.2,Courtney Perez,Closed
+4419,Email Server,Security breach,2024-11-23,10.61,Sally Bradley,In Progress
+3502,HRM System,Login failure,2024-03-30,35.23,Brittany Russell,Closed
+3094,Backup Server,Access Denied,2025-01-17,6.67,Pamela Stone,Closed
+6919,Antivirus,Login failure,2025-02-19,29.41,Ashley Williams,Escalated
+3400,Intranet,Downtime,2025-04-16,16.27,Rodney Butler,In Progress
+2410,CRM,System crash,2024-11-10,32.37,Amanda Kirby,Pending
+9984,Email Server,Security breach,2025-01-14,44.53,Jason Sanford,Closed
+1478,Antivirus,Slow performance,2025-01-28,33.69,Jenna Ferguson,Resolved
+3872,Backup Server,Security breach,2025-02-16,26.63,Sarah Garcia,Escalated
+4235,Backup Server,Downtime,2023-10-20,16.65,Candice Rich MD,In Progress
+8182,HRM System,Update failure,2023-09-30,32.51,Brian Rogers,In Progress
+5181,Email Server,Slow performance,2024-04-28,44.32,John Johnson,Escalated
+2322,Backup Server,Access Denied,2025-04-10,13.78,Melanie Wilson,Closed
+6014,Email Server,Downtime,2022-09-28,14.06,Robert Nguyen,Pending
+2060,Backup Server,Update failure,2024-09-20,29.35,Sharon Gould,Resolved
+2286,Backup Server,Login failure,2025-04-20,12.62,Valerie Howard,Pending
+6851,Email Server,System crash,2025-04-04,38.07,Connor Bell,Resolved
+6994,Email Server,System crash,2023-05-15,8.16,Shannon Mullins,Resolved
+6843,CRM,Data loss,2024-07-29,12.63,William Arellano,Resolved
+2013,Email Server,Security breach,2022-08-09,33.26,Andrew Williams,Escalated
+4218,Backup Server,Data loss,2024-01-15,41.56,Steven Beck,Closed
+1321,HRM System,Slow performance,2024-05-05,23.19,Ryan Smith,Closed
+2041,Antivirus,Access Denied,2022-10-21,4.24,Kevin Clark,Escalated
+6998,Antivirus,Update failure,2022-12-23,22.26,Michael Larsen,Pending
+8930,Firewall,Update failure,2022-08-01,41.5,James Wilson,Resolved
+7762,HRM System,Update failure,2024-11-07,3.16,Rachel Coleman,Resolved
+4407,ERP,Security breach,2022-11-22,19.45,Andrew Thompson,In Progress
+9395,Backup Server,Access Denied,2025-02-28,36.82,James Fuller,Closed
+8658,ERP,Slow performance,2022-08-29,23.67,Jonathan Bell,In Progress
+8851,ERP,Login failure,2022-06-08,34.23,Ashley Smith,Pending
+9558,Email Server,Access Denied,2022-10-17,14.01,Tara Rose,In Progress
+4618,Backup Server,Data loss,2023-02-18,29.25,Rebecca Owens,In Progress
+8535,Email Server,Security breach,2024-06-03,12.93,Alicia Wilson,Closed
+5739,Email Server,Security breach,2023-03-21,17.48,Elizabeth Fox,In Progress
+4351,ERP,Login failure,2023-10-17,32.21,Tabitha Payne,Resolved
+7236,Backup Server,Login failure,2024-04-11,23.8,Robin Smith,Resolved
+2102,Firewall,Slow performance,2022-11-02,42.72,Tara Knight,Resolved
+9217,Firewall,Security breach,2023-03-14,16.95,Alyssa Carter,Escalated
+5595,CRM,Data loss,2023-10-22,20.16,Tony Smith,Resolved
+3902,Email Server,System crash,2022-11-14,26.07,Michael Kim,Closed
+4624,Firewall,Downtime,2023-12-23,20.37,James Dillon,Escalated
+6204,Antivirus,Security breach,2023-06-04,22.81,Kathleen Vazquez,Resolved
+6087,Email Server,Slow performance,2023-03-30,4.73,David Ross,Pending
+5930,Antivirus,Update failure,2023-02-22,29.3,James Bryant,Pending
+9470,Antivirus,Login failure,2023-06-13,37.22,James Scott,Pending
+4638,HRM System,Update failure,2024-09-23,15.95,Brendan White,Resolved
+8383,Antivirus,Security breach,2024-06-25,19.8,Regina Miller,Escalated
+1593,Email Server,Slow performance,2023-04-30,18.22,Loretta Ortega,Pending
+5299,Firewall,Update failure,2023-11-25,45.58,Rachael Cross,Closed
+6898,Email Server,Downtime,2023-10-25,3.66,Rebecca Hayes,Closed
+6114,Backup Server,Slow performance,2023-06-23,38.15,Lauren Daniels,In Progress
+7199,Email Server,Update failure,2024-01-20,11.05,Colleen Howard,Escalated
+2349,HRM System,Login failure,2023-03-17,33.94,Amy Russell,Closed
+5665,HRM System,System crash,2024-12-23,14.78,Andrew Carr,Pending
+2180,Intranet,Data loss,2022-06-15,32.34,Teresa French,In Progress
+7072,HRM System,Data loss,2023-12-16,47.19,Marcus Walters,Pending
+3571,HRM System,System crash,2024-02-12,6.05,Cory Adkins,Escalated
+1620,Email Server,System crash,2024-01-08,10.3,Raymond Davis,In Progress
+9248,HRM System,Access Denied,2025-01-26,33.76,Tammy Hunter,In Progress
+7831,CRM,Access Denied,2022-11-30,27.86,John Butler,Pending
+1654,HRM System,Login failure,2025-02-14,47.07,Ebony Stanley,Pending
+4928,Backup Server,Update failure,2023-03-19,33.23,Joshua Ortiz,In Progress
+1088,HRM System,Access Denied,2023-11-19,43.33,John Benson,Resolved
+8517,Backup Server,Update failure,2023-01-11,7.81,Patricia Patel,Escalated
+1995,Email Server,System crash,2024-04-07,14.98,Larry Mills,Pending
+9499,Backup Server,Downtime,2024-12-30,18.74,Tracy Garrison,Closed
+5871,HRM System,Downtime,2022-10-19,13.82,Kevin Fernandez,In Progress
+7623,Backup Server,Login failure,2024-09-16,26.07,Charles Dunlap,Escalated
+4675,Backup Server,Downtime,2023-01-05,32.21,George Erickson Jr.,Resolved
+3768,Email Server,Access Denied,2024-12-16,9.43,Jeffery Hogan,Escalated
+3037,Email Server,System crash,2023-06-28,9.76,James Turner,Closed
+7838,ERP,Security breach,2025-01-21,5.75,Rachel Gilbert,Pending
+2807,Email Server,Update failure,2023-04-24,44.76,Robin Andersen,Closed
+7527,Antivirus,Update failure,2023-11-22,27.45,Amy Welch,Closed
+4326,CRM,Data loss,2024-12-23,33.05,Todd Hendrix,Pending
+8185,CRM,Security breach,2022-09-20,23.17,Meghan Curtis,Pending
+6079,Email Server,Data loss,2025-04-14,43.92,Chad Jordan,In Progress
+6090,Intranet,Update failure,2023-12-08,43.72,Brian Meadows,Closed
+4590,CRM,Downtime,2022-12-31,25.39,Michael Edwards,Closed
+4983,ERP,Downtime,2022-11-12,8.1,Kimberly Shields,Pending
+6571,Backup Server,Downtime,2023-07-17,15.14,William Hernandez,Resolved
+1377,Firewall,Slow performance,2024-04-26,3.34,Crystal Morgan,Escalated
+4797,Firewall,Login failure,2022-11-07,10.45,Casey Bryan,Pending
+6561,Email Server,System crash,2023-02-05,24.89,Patrick Moreno,In Progress
+9432,Firewall,Data loss,2023-11-15,22.88,Mr. Jeremy Warren DVM,In Progress
+7958,Email Server,Login failure,2023-11-12,10.08,Melissa Williams,Escalated
+3425,ERP,System crash,2023-01-07,22.19,Laura Oliver,In Progress
+5679,Email Server,System crash,2023-08-29,12.39,Charles Maxwell,Closed
+6438,HRM System,Data loss,2024-02-03,18.04,Brittany Powell,Escalated
+4824,HRM System,Security breach,2023-06-02,29.64,Angel Smith,In Progress
+9634,Antivirus,Security breach,2023-12-22,5.67,Glen Bennett,Escalated
+4643,Antivirus,Downtime,2023-05-19,47.56,Stuart Myers,Resolved
+9633,Backup Server,Downtime,2025-04-25,21.61,Nicole Stewart,Resolved
+2005,Antivirus,Update failure,2023-09-07,34.2,Greg Bailey,Pending
+8279,CRM,Data loss,2024-11-17,25.86,Daniel Moses,Pending
+2651,Antivirus,Data loss,2022-08-29,24.0,Justin Jackson,Closed
+2387,CRM,Downtime,2022-11-27,29.17,Cody Gonzalez,Closed
+3451,ERP,Update failure,2025-05-13,46.36,Jon Dunn,In Progress
+2907,HRM System,System crash,2022-09-17,23.38,Robin Mckenzie,Escalated
+5131,Email Server,Login failure,2022-08-07,12.56,Justin Anderson,In Progress
+1856,Intranet,Login failure,2023-01-08,42.73,Joseph Liu,Pending
+3147,Email Server,Data loss,2022-10-24,46.85,Wesley Gibson,Resolved
+8514,HRM System,Update failure,2023-06-28,1.81,Eric Lamb Jr.,Closed
+1573,CRM,Security breach,2024-10-23,38.23,Dennis Griffin,Escalated
+6801,Intranet,System crash,2024-03-24,1.77,Tina Horne,Escalated
+4411,Antivirus,System crash,2023-05-17,8.61,Juan Walker,Pending
+4538,Backup Server,Access Denied,2023-10-05,39.96,Maria Guzman,Escalated
+9578,Email Server,Access Denied,2022-10-26,3.77,Lance Shaw,In Progress
+6172,Backup Server,Slow performance,2022-06-01,30.07,Ashlee Morgan,Pending
+4662,Backup Server,Update failure,2023-11-27,40.0,Stephanie Hall,Pending
+1422,Backup Server,Update failure,2023-02-22,40.04,John Roberts,Resolved
+6971,Firewall,Access Denied,2022-10-21,36.57,Matthew Odonnell,Pending
+7161,Firewall,System crash,2023-01-23,28.17,Courtney Morales,Pending
+3179,HRM System,Slow performance,2024-06-17,32.2,Robert Brady,In Progress
+1090,Antivirus,System crash,2024-06-06,30.72,Dominic Hobbs,Escalated
+3230,ERP,Downtime,2023-05-09,31.75,Cassandra Watts,In Progress
+4463,Antivirus,Update failure,2023-03-04,37.85,Ashley Jones,Closed
+2709,Intranet,System crash,2024-05-11,18.27,Carl Lee,Escalated
+7350,HRM System,Data loss,2022-08-25,40.89,Laurie Rivas,Resolved
+8433,Firewall,Security breach,2025-01-21,20.83,Michael Hanson,Resolved
+1605,CRM,Security breach,2023-12-08,20.52,Jerry Coleman,Pending
+4193,Antivirus,Slow performance,2024-02-13,30.47,Philip Pearson,Closed
+3242,Email Server,Slow performance,2024-10-20,20.13,Ashley Alvarez,Pending
+1914,Antivirus,Data loss,2022-05-16,15.36,Nicole Krause,In Progress
+2623,Email Server,Security breach,2023-10-11,8.44,Jon Lester,Pending
+2714,Email Server,System crash,2024-02-06,13.48,Emily Garcia,Closed
+9233,ERP,Data loss,2023-06-07,23.53,Billy Thomas,Resolved
+9875,Intranet,Data loss,2023-11-29,5.8,Nicole Ball,Resolved
+8277,Email Server,Update failure,2023-01-23,14.68,Denise Lee,In Progress
+3200,Intranet,Data loss,2025-03-05,14.49,Erin Jordan,Escalated
+9462,Antivirus,Access Denied,2023-06-07,24.82,Jackson Jones,Closed
+8916,HRM System,Security breach,2022-08-12,30.71,Taylor Conley,Closed
+9511,Antivirus,System crash,2023-06-09,35.75,Scott Powell,Escalated

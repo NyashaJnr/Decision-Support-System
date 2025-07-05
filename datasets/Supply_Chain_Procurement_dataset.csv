@@ -1,0 +1,201 @@
+Procurement ID,Item Name,Category,Supplier,Order Quantity,Unit Cost (USD),Total Cost (USD),Order Date,Delivery Date,Procurement Status
+40b5bbf8-79e1-45c1-b630-bcde7d9d41f7,Check,Raw Materials,"Henderson, Lynch and Nelson",389,141.14,54903.46,2024-09-03,2024-08-18,Received
+6e0a394c-bbf8-4e26-b7bb-c20ca5ee8e8e,Choice,Office Supplies,"Roberts, Harper and Nelson",356,371.63,132300.28,2025-01-10,2025-02-16,Ordered
+5ca5770a-8429-43fb-8144-be96e2b66690,Fine,Machinery,Walsh-Bautista,26,19.75,513.5,2025-01-03,2025-02-04,Received
+47b4a0cb-341a-4861-b93d-1697aee0b10d,Method,Office Supplies,Cherry PLC,318,18.14,5768.52,2024-11-02,2025-01-19,Received
+dfee877b-aadc-4799-927a-4c7d3bcc496a,His,Machinery,Walsh-Bautista,122,227.36,27737.92,2025-05-06,2024-07-20,Pending
+04f0f6cb-7655-47b5-b111-b3a45aa54eff,Check,Raw Materials,Robbins-Morris,367,214.19,78607.73,2024-05-20,2024-07-05,Pending
+d345a071-67d2-453d-9477-459245dfd786,Lay,Office Supplies,Johnston LLC,500,382.93,191465.0,2024-08-14,2024-10-23,Ordered
+ce9eb152-2510-492c-9bfa-3d6df6f563f2,Situation,Raw Materials,Walsh-Bautista,59,182.69,10778.71,2025-03-21,2024-09-02,Pending
+4795534c-4bd4-496f-92f0-97bcedbe2d15,Yourself,Machinery,Rogers-Combs,423,26.51,11213.73,2024-11-17,2024-12-24,Cancelled
+d451b392-2a39-4718-a3a9-fa28a4bc04e9,Consider,Machinery,"Roberts, Harper and Nelson",482,192.37,92722.34,2024-09-04,2024-12-07,Pending
+2228ba31-fdf0-4806-9d42-0dadf97802e0,Door,Machinery,Wells-Donovan,305,100.18,30554.9,2024-10-03,2024-05-15,Ordered
+6f2fadcf-2a88-4329-a6be-77cdc463795c,And,Raw Materials,Johnston LLC,405,148.25,60041.25,2024-07-11,2024-07-26,Ordered
+a001b85d-9d39-41eb-ae13-55f22f5357e8,Maintain,Office Supplies,"Roberts, Harper and Nelson",204,142.6,29090.4,2024-08-24,2024-06-23,Pending
+32b9c80b-e3a4-4444-a081-4511a6ebc303,Character,Office Supplies,Wells-Donovan,191,108.71,20763.61,2024-10-19,2024-12-27,Pending
+71153b0e-8389-4f2f-9458-baa8df1778fe,Some,Raw Materials,"Boyd, Vasquez and Smith",335,89.71,30052.85,2025-04-27,2025-03-20,Received
+d11da33f-df6a-442e-ae61-b4f5afbe83cc,Positive,Office Supplies,"Valenzuela, Butler and Little",204,138.62,28278.48,2024-07-29,2025-04-20,Received
+cef8c513-52d2-4e06-87b0-0c075ac012b8,Get,Electronics,"Henderson, Lynch and Nelson",127,411.79,52297.33,2025-02-09,2024-08-24,Pending
+50d4a57b-f315-4836-830c-7543b8bfa9f2,List,Packaging,Rogers-Combs,43,109.44,4705.92,2025-05-08,2025-04-01,Pending
+6a32a664-de6e-4f23-9d9f-886bac8a1329,Within,Office Supplies,"Valenzuela, Butler and Little",212,442.92,93899.04,2024-08-14,2024-12-18,Cancelled
+8da85d45-7cb1-4cc8-b3a8-327ee19c22e3,Effort,Office Supplies,Rogers-Combs,81,127.08,10293.48,2024-10-16,2025-03-21,Pending
+79e7b646-5f5f-4bfa-8cf6-73707ba3a708,Recent,Machinery,Walsh-Bautista,469,293.85,137815.65,2024-10-21,2025-03-12,Pending
+8fe86564-6599-459b-abfc-8fda09c790c2,Bar,Office Supplies,Robbins-Morris,270,249.29,67308.3,2024-11-19,2025-03-07,Ordered
+21a40a4d-a620-4c61-92a2-6612d4a433ce,Community,Raw Materials,Robbins-Morris,331,84.19,27866.89,2025-03-19,2024-08-15,Cancelled
+8d34bd23-a08e-42fb-8f89-01842226307d,Accept,Machinery,"Roberts, Harper and Nelson",207,193.9,40137.3,2024-12-25,2024-10-03,Cancelled
+a32c5f2f-b198-48d1-9bcd-9aa832652ad9,Talk,Machinery,Rogers-Combs,293,431.09,126309.37,2025-04-13,2024-09-26,Ordered
+983b7ea7-7039-46a5-82d7-842d69d9dcfa,Really,Raw Materials,Cherry PLC,394,137.08,54009.52,2024-10-06,2024-09-16,Pending
+af307e4d-cc3c-43e3-875c-9bccfc86c145,Significant,Raw Materials,Rogers-Combs,232,83.29,19323.28,2025-03-23,2024-08-14,Ordered
+4606e105-d9e6-4298-98e4-e94dadb4957b,Occur,Electronics,Cherry PLC,400,93.43,37372.0,2025-02-17,2024-06-30,Ordered
+089765b7-a454-4479-abae-102ecd1d61f8,Find,Electronics,Cherry PLC,321,103.46,33210.66,2024-07-09,2024-05-17,Pending
+b4ee77c8-d11e-4f50-8189-bff5f3fb071e,Need,Office Supplies,Cherry PLC,498,390.42,194429.16,2024-09-01,2024-05-22,Ordered
+94f58048-4028-4b88-9e7d-8c23a1aaf749,Necessary,Machinery,Wells-Donovan,260,14.64,3806.4,2024-11-14,2025-04-10,Pending
+d53b08d2-6184-4a98-8e7a-1867d7e10e45,Air,Electronics,Johnston LLC,39,124.23,4844.97,2025-04-29,2025-02-20,Ordered
+b46134ba-cbb7-4076-914b-81f52b7e7539,Management,Raw Materials,"Valenzuela, Butler and Little",427,39.26,16764.02,2025-04-28,2024-09-14,Received
+ca6a5ed1-558e-4bae-858a-da39ba0295c9,Understand,Office Supplies,"Valenzuela, Butler and Little",494,277.15,136912.1,2024-06-28,2024-12-07,Pending
+dfcc19f3-fc82-40ac-b7fa-c2903a8fab25,Factor,Machinery,"Boyd, Vasquez and Smith",226,482.36,109013.36,2025-01-31,2024-10-03,Received
+53178ee7-91d3-4ed8-b7e0-b3a4bd2213fe,Voice,Electronics,Walsh-Bautista,353,326.69,115321.57,2024-07-02,2025-05-09,Cancelled
+7e0d080e-114e-42e2-94a9-21448ebe5a82,Figure,Machinery,"Valenzuela, Butler and Little",71,127.71,9067.41,2025-02-25,2024-10-30,Ordered
+a306210f-4e41-48a8-93b6-c2f4267119cc,Exist,Electronics,"Henderson, Lynch and Nelson",311,279.19,86828.09,2024-08-14,2024-12-24,Received
+91aef974-7128-408a-9074-232071d880b4,Early,Raw Materials,"Roberts, Harper and Nelson",372,317.4,118072.8,2025-01-07,2024-05-22,Received
+f8c7b245-9a61-4ba1-a150-bb9d05e2bcd9,Poor,Raw Materials,"Henderson, Lynch and Nelson",450,168.56,75852.0,2025-04-06,2024-07-07,Received
+0d89c282-a5e9-4efb-b973-0cba09e38510,Right,Electronics,"Valenzuela, Butler and Little",119,271.92,32358.48,2025-01-11,2025-01-03,Cancelled
+9304e82a-df8a-4a2e-b6ba-293a19fd5e46,Its,Office Supplies,"Valenzuela, Butler and Little",423,206.49,87345.27,2025-04-04,2024-05-19,Ordered
+30a50b02-7022-4dfa-bfc0-8126e1f4c230,Already,Raw Materials,Walsh-Bautista,191,214.67,41001.97,2025-05-12,2024-05-25,Cancelled
+686d76ba-e36c-4175-b194-60f16b81c2ab,These,Raw Materials,"Roberts, Harper and Nelson",41,204.3,8376.3,2024-09-23,2025-01-27,Pending
+8104b190-445e-4c4f-adba-860a12d1cd97,Career,Raw Materials,Johnston LLC,108,99.15,10708.2,2025-03-09,2024-09-12,Cancelled
+99e54235-8d6e-47df-bc94-ff44be1fa431,Ask,Office Supplies,Walsh-Bautista,103,142.88,14716.64,2025-02-24,2024-09-10,Received
+8ea903e3-900b-4eb4-8ce6-0112ac101feb,Billion,Raw Materials,"Valenzuela, Butler and Little",423,431.37,182469.51,2024-08-16,2024-11-22,Ordered
+4c34d12b-7508-4d77-9cd3-072b7958956a,Newspaper,Raw Materials,Cherry PLC,438,12.31,5391.78,2024-07-17,2025-05-05,Ordered
+a520039f-d556-4e29-bc49-11b1783611f0,Ever,Office Supplies,Robbins-Morris,218,245.39,53495.02,2024-05-23,2024-06-08,Received
+a987bfdb-68f3-4ad4-b2e8-9df862199409,Against,Packaging,"Henderson, Lynch and Nelson",94,192.59,18103.46,2024-07-27,2024-10-05,Cancelled
+7b40159a-26e5-45b2-8f84-68ae0a4237ce,Business,Electronics,"Valenzuela, Butler and Little",156,214.39,33444.84,2024-06-14,2024-08-24,Cancelled
+45d1b711-ed0c-4983-bcc9-9650b0226f28,Meeting,Office Supplies,Johnston LLC,161,112.76,18154.36,2024-08-22,2024-07-14,Ordered
+0f6c9f9f-e1c8-4268-bf01-f9aee5514843,Billion,Machinery,Cherry PLC,41,375.25,15385.25,2025-05-10,2024-11-25,Ordered
+6a018087-2539-4b63-91e4-5cf33af9b7eb,Ability,Raw Materials,"Boyd, Vasquez and Smith",254,253.91,64493.14,2024-08-22,2024-08-19,Received
+09a3cbbd-3638-4adc-a42d-7659cec84d81,His,Raw Materials,Cherry PLC,51,426.41,21746.91,2024-05-19,2024-12-08,Ordered
+7715dbc1-8a4d-4eb6-a2b5-b2eca1ab90cd,Power,Machinery,"Roberts, Harper and Nelson",355,431.6,153218.0,2025-01-19,2025-04-14,Cancelled
+75a7ac40-ef22-4974-89f5-108a070ef337,Boy,Raw Materials,"Boyd, Vasquez and Smith",136,291.56,39652.16,2024-08-14,2024-07-07,Ordered
+73238fd6-be21-4b0b-9aa8-ec78375a07b0,International,Machinery,"Roberts, Harper and Nelson",224,330.4,74009.6,2025-03-14,2024-06-29,Pending
+97a5c1b2-1afb-4ba9-b49a-c904cc8f1d67,Case,Electronics,Johnston LLC,352,359.51,126547.52,2025-01-06,2024-10-19,Received
+59d4c301-134e-4e0d-a354-1c0065f55a15,Treatment,Electronics,Walsh-Bautista,77,337.49,25986.73,2025-04-08,2025-03-20,Pending
+1d2c57be-dc72-4208-8352-4c41bebb56a8,Soon,Packaging,Wells-Donovan,485,377.17,182927.45,2024-07-13,2024-07-26,Ordered
+fb88831a-12b9-4625-8c9c-e4dd7c04d096,Walk,Raw Materials,"Valenzuela, Butler and Little",328,499.23,163747.44,2025-02-09,2024-10-04,Ordered
+abd912fa-3e6c-48e4-a565-fa77fd172a84,Every,Raw Materials,Cherry PLC,119,255.41,30393.79,2024-07-29,2024-08-06,Received
+edf79d90-8ac7-44fa-8316-9425f5cefdc8,Hospital,Electronics,"Roberts, Harper and Nelson",460,125.92,57923.2,2024-11-20,2024-12-06,Pending
+576a5d27-c118-4423-998b-750869d2b959,Rest,Office Supplies,"Valenzuela, Butler and Little",436,273.89,119416.04,2025-04-20,2024-06-04,Pending
+0e5b32ea-0c16-44e3-8500-873a1a7e2ed3,Speech,Machinery,Cherry PLC,14,335.59,4698.26,2024-12-08,2024-09-05,Pending
+a441ce72-ff0a-4477-a38a-5fd313898a07,Old,Raw Materials,Robbins-Morris,145,62.14,9010.3,2024-08-09,2024-08-08,Ordered
+73f19ce1-76fe-4568-9ae9-a3c6e8bcaae1,Nothing,Machinery,Robbins-Morris,149,144.47,21526.03,2024-09-04,2024-05-28,Received
+16cc830f-9cc1-4653-8280-687ad81c2c92,Moment,Electronics,Johnston LLC,361,318.95,115140.95,2024-06-03,2025-03-22,Pending
+157c14ed-d258-45a6-a9c8-230294f43c23,Board,Machinery,"Valenzuela, Butler and Little",138,453.14,62533.32,2024-11-30,2024-05-23,Ordered
+f5d981a1-d9fa-491e-a4f8-dc9e1c141690,First,Raw Materials,Walsh-Bautista,434,141.96,61610.64,2024-10-21,2024-08-04,Ordered
+95cb783e-af4d-419a-8f86-3245032583ff,Baby,Electronics,Robbins-Morris,336,490.0,164640.0,2024-07-05,2025-03-30,Received
+49c026b0-d074-4f5d-af6a-ec6a234dd670,Rest,Packaging,Cherry PLC,371,216.71,80399.41,2024-11-14,2024-08-26,Ordered
+d2953599-6805-437f-a1db-2c7d92c48db8,Father,Raw Materials,"Roberts, Harper and Nelson",493,442.14,217975.02,2025-04-13,2025-04-23,Received
+e3db2d9f-5e78-42e2-a9fa-6e3a900dfdf0,Usually,Machinery,"Henderson, Lynch and Nelson",437,187.76,82051.12,2025-01-13,2024-09-10,Received
+5acaaeb5-8a32-49d4-b934-ac8fd8d93784,Return,Packaging,Robbins-Morris,31,157.59,4885.29,2024-10-21,2024-09-30,Ordered
+4554c846-4b45-4134-ae5c-e3dcb978716f,May,Electronics,Johnston LLC,359,128.52,46138.68,2024-11-30,2024-09-01,Ordered
+91e9a2db-7bd7-42f4-8d8e-c669b7d44a16,Strategy,Electronics,Cherry PLC,462,437.98,202346.76,2024-09-02,2024-07-05,Received
+dc88dc14-4a9a-4df8-a0ca-fb56de28eb8f,Form,Office Supplies,Robbins-Morris,419,406.33,170252.27,2024-09-10,2024-10-21,Cancelled
+e1ae27fe-3398-472d-b8b9-f15efdf4decb,Suggest,Raw Materials,Robbins-Morris,387,462.62,179033.94,2025-03-18,2024-08-18,Cancelled
+3c5819fa-1e71-43b8-9093-4320afd27891,Political,Office Supplies,Rogers-Combs,91,394.75,35922.25,2024-12-10,2025-01-16,Ordered
+874ae15e-bbd6-467b-bedb-af7bfa3e499a,Culture,Packaging,"Henderson, Lynch and Nelson",449,237.99,106857.51,2024-06-14,2025-01-25,Received
+7c920ef8-5acf-4858-9664-8cdac9a0c65a,Expert,Packaging,Wells-Donovan,166,411.17,68254.22,2024-10-30,2025-04-15,Received
+231deea7-b82c-4e13-a4d2-e3a63287a888,Treatment,Office Supplies,"Henderson, Lynch and Nelson",347,100.6,34908.2,2024-10-11,2024-12-17,Pending
+34c97a74-0e4b-46c2-b238-dc439a5aa38d,Hospital,Electronics,"Roberts, Harper and Nelson",405,143.17,57983.85,2025-04-18,2024-11-25,Cancelled
+e7f1200f-2012-4209-9e01-12293601a3d5,Democrat,Machinery,Wells-Donovan,490,18.66,9143.4,2024-06-01,2024-12-19,Pending
+46349060-6c00-4a5b-bdc0-2dda27d009a0,Should,Office Supplies,"Boyd, Vasquez and Smith",145,23.94,3471.3,2025-03-16,2024-11-03,Cancelled
+fb5f031c-e68f-4065-ae5b-084b5ed7a33b,About,Electronics,Wells-Donovan,233,305.07,71081.31,2024-07-17,2024-12-20,Ordered
+a38edd63-b141-4b42-911d-42dc9b195343,Staff,Packaging,"Boyd, Vasquez and Smith",107,131.09,14026.63,2024-09-04,2024-06-08,Cancelled
+e73c2a3a-bcae-41ad-a419-28bd1049b063,Number,Raw Materials,Cherry PLC,483,404.22,195238.26,2025-01-06,2024-06-14,Received
+335e11ec-c888-4ed8-9916-d30d52905789,Institution,Electronics,Walsh-Bautista,45,474.69,21361.05,2025-02-14,2024-11-04,Pending
+7e92de41-9467-47a9-bbb3-b3d8fd633291,Serious,Machinery,Wells-Donovan,349,424.77,148244.73,2024-08-01,2024-05-26,Pending
+ce187d01-9a94-400d-979e-966077720dd8,Despite,Machinery,Rogers-Combs,351,207.15,72709.65,2025-02-22,2025-01-30,Cancelled
+0e70bcc5-2d3d-4b45-9332-7b64f7c2715f,Wind,Electronics,Cherry PLC,75,99.96,7497.0,2024-10-18,2024-07-24,Cancelled
+f347f86f-be1c-4941-b871-562410772a6b,Describe,Office Supplies,"Boyd, Vasquez and Smith",301,153.97,46344.97,2024-06-22,2024-05-24,Ordered
+9c194b67-26c1-4491-8230-42a8b0dc1dc1,Sort,Electronics,Rogers-Combs,117,217.79,25481.43,2024-08-25,2024-10-03,Pending
+655bf62e-05b4-45b1-ab9f-5bbc3347234f,Yet,Packaging,"Valenzuela, Butler and Little",236,339.44,80107.84,2024-08-05,2024-07-08,Cancelled
+87b1ea69-e125-4071-831a-6defc407e6eb,Career,Office Supplies,"Roberts, Harper and Nelson",155,260.15,40323.25,2025-04-17,2025-02-16,Pending
+43b72cd3-63fc-4b78-b660-73e98beb70ba,Benefit,Raw Materials,Johnston LLC,354,158.66,56165.64,2025-03-02,2025-03-03,Received
+2cfb4575-915f-4e84-a358-069622cf2bb0,Before,Office Supplies,"Henderson, Lynch and Nelson",33,126.2,4164.6,2024-08-03,2024-12-25,Cancelled
+51213cfe-9722-4dc0-bbf0-a0defb826284,Buy,Machinery,"Roberts, Harper and Nelson",243,210.15,51066.45,2024-05-31,2024-12-01,Received
+efd730cd-c1a1-489b-a363-61c14f3062a7,Together,Packaging,"Valenzuela, Butler and Little",214,125.77,26914.78,2025-01-02,2025-02-02,Ordered
+2d17e970-b664-4cec-ad85-47ab3f715e41,Ball,Raw Materials,Walsh-Bautista,122,92.06,11231.32,2024-09-22,2025-04-02,Cancelled
+a6f0ee81-1d4b-40bd-96dc-02cdb5b4aef3,Staff,Raw Materials,Cherry PLC,137,459.15,62903.55,2025-01-24,2024-07-31,Ordered
+fcf447a4-3b8b-4099-a11c-e7e402ee9986,Low,Packaging,Robbins-Morris,420,235.0,98700.0,2025-04-03,2025-03-10,Pending
+5005ea41-75ad-4902-b586-b2e625e5681d,Method,Packaging,"Boyd, Vasquez and Smith",427,361.04,154164.08,2024-10-06,2024-06-07,Cancelled
+73e98342-844e-4676-b7a7-2cd228e44c86,Decision,Machinery,"Valenzuela, Butler and Little",469,83.78,39292.82,2024-06-08,2025-01-21,Cancelled
+3d489c7e-26e3-4a1f-9e33-44120481eeef,Own,Packaging,Rogers-Combs,394,127.38,50187.72,2025-04-05,2024-06-08,Pending
+5f17f400-7db0-46f8-8707-da78fd7ffbe5,Week,Machinery,"Valenzuela, Butler and Little",330,123.43,40731.9,2024-11-23,2025-01-13,Cancelled
+3719c6b0-a208-4e33-915b-e8993cc5659f,Their,Raw Materials,Rogers-Combs,130,139.5,18135.0,2024-07-29,2024-11-16,Pending
+c9df5ef9-700d-4cd9-a1d5-b8a6c8c0c64f,Piece,Machinery,"Roberts, Harper and Nelson",80,79.66,6372.8,2024-11-06,2024-11-28,Cancelled
+5cb3d793-b543-41ae-8a58-459c7a8e4459,Medical,Office Supplies,Johnston LLC,42,210.36,8835.12,2025-03-26,2024-12-02,Pending
+ceebd22a-62df-4f7e-8246-bddfa84c7287,Candidate,Machinery,"Valenzuela, Butler and Little",222,35.82,7952.04,2024-07-05,2024-05-20,Cancelled
+1c070286-e3cc-4b30-9d28-5f47e5b0b610,Claim,Packaging,"Boyd, Vasquez and Smith",494,349.28,172544.32,2024-06-11,2024-12-17,Cancelled
+d1d7851c-76c7-4b28-ad43-4800fadbb7a0,Sell,Packaging,"Henderson, Lynch and Nelson",492,179.12,88127.04,2025-02-17,2024-12-01,Cancelled
+581d11e5-a700-4b0d-b37b-e673963e019e,Sure,Packaging,Cherry PLC,392,368.64,144506.88,2024-08-26,2024-07-20,Received
+21a3d02a-8e44-4302-b080-a3ccc3cec695,Over,Packaging,Johnston LLC,149,220.74,32890.26,2024-06-11,2025-02-06,Ordered
+98d58f64-32a6-4379-9897-a98b9c08533c,Much,Packaging,Wells-Donovan,352,341.18,120095.36,2025-01-18,2024-09-20,Cancelled
+d388a064-d5a9-46fe-acce-30888afd6dff,Piece,Office Supplies,"Valenzuela, Butler and Little",480,68.18,32726.4,2024-08-02,2025-02-27,Ordered
+5c032180-9261-4513-9927-fb5c5ec4532c,Share,Packaging,"Boyd, Vasquez and Smith",298,333.18,99287.64,2024-05-20,2024-09-27,Ordered
+0166a8d6-d433-4a8e-9e62-8cd648eec9af,Employee,Packaging,Robbins-Morris,453,233.54,105793.62,2025-04-11,2024-10-11,Ordered
+5a7f269f-3ee4-4af8-a668-adb2ad1c5219,Hotel,Electronics,Walsh-Bautista,177,109.77,19429.29,2025-04-26,2024-05-19,Pending
+a4f16d13-dcbe-4e0a-8736-4c38e06d10a7,Network,Electronics,Walsh-Bautista,152,377.24,57340.48,2024-12-21,2024-11-30,Cancelled
+eed2d1b1-898d-469c-84e3-a9b987ef3818,Else,Electronics,"Roberts, Harper and Nelson",250,14.59,3647.5,2024-11-15,2024-05-20,Ordered
+455105a5-15c8-4311-9675-df75b00febcd,Same,Electronics,Johnston LLC,342,38.97,13327.74,2024-11-28,2025-03-26,Ordered
+9834f423-cd93-4d46-8fd8-9acb7980b8c8,Toward,Raw Materials,Johnston LLC,112,420.42,47087.04,2024-12-28,2025-04-28,Received
+fc4d970f-b507-42fa-b959-7540f2079fd2,Fall,Office Supplies,Robbins-Morris,252,336.38,84767.76,2025-01-29,2024-06-26,Received
+44efbf2d-ac19-4a23-85ea-620ecad70517,Simple,Packaging,Rogers-Combs,402,187.6,75415.2,2024-08-28,2025-05-01,Ordered
+711bb0ca-1f97-423e-bc40-73063206d9da,As,Office Supplies,Rogers-Combs,65,291.45,18944.25,2024-10-26,2024-12-23,Pending
+38a84921-b169-4c19-8f76-5f818820340a,Vote,Machinery,Walsh-Bautista,213,471.03,100329.39,2025-04-17,2024-11-01,Received
+d0fb8f28-2c03-4e83-a439-46438ac3bfa3,Fact,Raw Materials,"Boyd, Vasquez and Smith",363,416.13,151055.19,2025-04-06,2024-07-17,Received
+073f55cc-00a1-4a99-8aa1-6e2ae8ac3efc,Sing,Raw Materials,Rogers-Combs,445,343.71,152950.95,2024-09-06,2024-11-28,Ordered
+329ff5ab-6e60-429c-97a1-107cbe61e39a,New,Machinery,"Henderson, Lynch and Nelson",187,268.71,50248.77,2024-10-01,2025-01-01,Pending
+7d6c386f-c812-416f-931b-1e0ee46fce90,Doctor,Raw Materials,Cherry PLC,341,173.91,59303.31,2024-07-25,2025-04-26,Cancelled
+f07af174-c2d8-44df-b0ce-025fa2e102f1,Woman,Packaging,"Roberts, Harper and Nelson",231,480.59,111016.29,2025-01-13,2025-02-25,Cancelled
+569a8f02-7752-4b72-8cab-0a76fd7f4cd8,Human,Office Supplies,Walsh-Bautista,100,368.23,36823.0,2024-10-09,2025-01-15,Pending
+8b429558-1e73-4665-a9eb-72cb07ec3f7f,Difficult,Machinery,Cherry PLC,406,244.33,99197.98,2024-09-04,2025-02-24,Cancelled
+dd2e6fe0-efab-40cb-88c6-9a0a67337c7d,Off,Machinery,Rogers-Combs,175,426.6,74655.0,2025-02-23,2024-05-19,Ordered
+44d6afe0-f659-4d18-9615-9e03a78a7d11,Son,Electronics,"Valenzuela, Butler and Little",134,376.49,50449.66,2024-08-26,2024-09-01,Cancelled
+57d382ee-8ac2-4135-a61d-c345b5b52748,Save,Electronics,"Henderson, Lynch and Nelson",263,426.22,112095.86,2024-11-05,2024-12-24,Received
+01ee0a24-ecd4-4143-8bce-ec4642b02334,Painting,Packaging,Johnston LLC,191,399.93,76386.63,2024-09-08,2024-05-22,Pending
+d05c841e-493f-4c68-b288-194ea061658c,Spend,Electronics,"Boyd, Vasquez and Smith",369,440.65,162599.85,2025-04-18,2024-08-05,Ordered
+b2c5ca88-dece-4313-87bb-2807463586e0,Official,Machinery,Johnston LLC,53,124.47,6596.91,2024-09-23,2024-06-12,Cancelled
+c42880f7-ca0b-45d8-88f5-cc792723aa27,Whose,Packaging,Cherry PLC,398,123.96,49336.08,2025-03-08,2024-07-04,Cancelled
+fbe3e2ef-45e2-4972-9bce-1163e69f9de1,The,Packaging,"Valenzuela, Butler and Little",415,13.54,5619.1,2024-07-15,2024-10-27,Pending
+ad538a67-5cae-42c0-a6c7-7abd9b6b0601,Blue,Office Supplies,Walsh-Bautista,364,125.44,45660.16,2024-07-19,2024-09-27,Pending
+cb6dd37c-ca27-4ed2-ae68-acf870af8d05,Thank,Packaging,Cherry PLC,281,175.16,49219.96,2025-01-10,2024-12-29,Pending
+99530a06-cf89-4b74-b236-682b28a09ff3,Institution,Electronics,"Valenzuela, Butler and Little",148,156.78,23203.44,2024-12-04,2024-05-25,Received
+be5436f5-f495-4e3c-9a22-8ad600f229b6,Project,Raw Materials,Johnston LLC,171,64.18,10974.78,2024-11-22,2025-04-15,Received
+5ebfc1c0-f39b-4443-9a19-88c19ab65113,Both,Office Supplies,Johnston LLC,388,244.68,94935.84,2024-10-08,2025-02-22,Pending
+48342373-3ee9-4641-9834-1c8903d80b8a,Those,Raw Materials,Johnston LLC,161,117.6,18933.6,2025-05-06,2025-04-18,Received
+fb023e85-9bb9-4fcd-b478-e70435b660af,Floor,Electronics,"Henderson, Lynch and Nelson",372,269.4,100216.8,2024-09-14,2024-11-13,Pending
+1e42ba4f-b5e2-46b7-8cef-adc83d593eb6,Offer,Raw Materials,"Henderson, Lynch and Nelson",293,149.61,43835.73,2024-10-24,2024-11-03,Received
+e1b168fa-a4a0-4b66-9eb8-dfd23dbe6383,Reality,Packaging,"Roberts, Harper and Nelson",456,11.07,5047.92,2024-12-15,2025-01-23,Pending
+924bf630-3df3-4852-bedb-04e61bf523f8,Foreign,Packaging,"Valenzuela, Butler and Little",235,173.65,40807.75,2025-01-28,2025-03-14,Ordered
+85c6ecfb-d69f-455d-b582-972150545add,Himself,Electronics,"Valenzuela, Butler and Little",68,411.95,28012.6,2024-08-16,2025-04-17,Cancelled
+095c6fb4-7513-4333-afdc-274e0d74c1f7,Even,Packaging,"Roberts, Harper and Nelson",305,316.58,96556.9,2025-04-08,2024-05-13,Ordered
+bf77e25e-a970-4e1f-944c-0660b7e41155,Must,Office Supplies,Robbins-Morris,425,283.61,120534.25,2024-06-13,2024-11-15,Pending
+456bec86-40d0-4f1a-af78-0fd9f519a9b3,Friend,Raw Materials,Johnston LLC,70,281.25,19687.5,2024-10-17,2025-02-21,Cancelled
+63e85159-b2e0-4f4b-910a-daf2d5bf0bc1,Though,Machinery,"Boyd, Vasquez and Smith",414,311.12,128803.68,2024-11-15,2024-07-15,Cancelled
+0d730594-9597-42f4-a9c3-81cd327abe9a,View,Packaging,"Valenzuela, Butler and Little",162,430.78,69786.36,2024-05-16,2024-10-25,Cancelled
+b2f694a8-819a-46a8-9383-1d983db8c2a9,Action,Electronics,"Boyd, Vasquez and Smith",327,34.81,11382.87,2024-11-30,2024-07-29,Ordered
+f6b63094-05a7-4141-889b-d1b0c3ac327c,Operation,Office Supplies,Johnston LLC,145,331.91,48126.95,2024-06-07,2024-11-28,Received
+312badb5-2ef4-4528-932e-f174f0a50164,Than,Office Supplies,Robbins-Morris,292,42.16,12310.72,2025-03-12,2025-04-03,Ordered
+bf37e8db-38ff-4a39-bc7f-48fe0216b4cf,Large,Packaging,"Valenzuela, Butler and Little",362,298.94,108216.28,2025-03-18,2025-02-11,Pending
+4156295e-bf58-4b66-9f4e-1cd70a8d0a0a,Protect,Raw Materials,Johnston LLC,157,354.94,55725.58,2025-04-08,2024-07-26,Cancelled
+3cd55dc9-1697-4dda-86b4-7d1009b801c7,Player,Raw Materials,Johnston LLC,483,135.95,65663.85,2025-05-06,2024-07-02,Received
+6a202a52-98e8-448d-b516-56e0edd8f439,Their,Packaging,"Roberts, Harper and Nelson",288,116.28,33488.64,2024-12-29,2025-05-02,Received
+9c2afbc3-c87d-40db-809c-a31a5fa25d0b,While,Electronics,Robbins-Morris,46,34.52,1587.92,2024-09-10,2025-04-11,Pending
+881ef62c-c6c7-458d-a18b-75c66c767c06,Off,Machinery,"Boyd, Vasquez and Smith",481,147.86,71120.66,2025-02-16,2024-06-21,Ordered
+8724ab38-50d3-43c7-8e88-a5618914dab7,Spend,Packaging,Rogers-Combs,368,204.24,75160.32,2025-04-12,2025-03-10,Pending
+a69f2b2b-cfec-468b-8bb6-0f3edfcf68fa,Image,Machinery,Cherry PLC,262,221.69,58082.78,2024-05-25,2024-12-25,Ordered
+834f99d7-f694-4799-bd23-5908bdb65306,Real,Packaging,Wells-Donovan,319,128.93,41128.67,2024-06-29,2024-06-25,Ordered
+81721401-f5ee-46b5-8c92-d2ff89d35ebe,Draw,Office Supplies,"Boyd, Vasquez and Smith",310,475.64,147448.4,2025-05-05,2025-05-10,Pending
+62b9da2f-1378-4965-a32a-d3094b46840a,Amount,Machinery,"Henderson, Lynch and Nelson",400,379.35,151740.0,2024-09-13,2024-05-29,Cancelled
+32dd9cef-f3f2-4054-9951-ffccc2daf446,Standard,Machinery,"Valenzuela, Butler and Little",479,142.69,68348.51,2025-02-23,2025-04-30,Cancelled
+08d13b0f-b5c0-43c8-bb68-675d85f8056f,Ok,Packaging,"Roberts, Harper and Nelson",250,177.24,44310.0,2025-03-01,2025-01-08,Pending
+af86daa9-2ee7-4fc4-b64d-82318d8db4ac,Finish,Electronics,"Roberts, Harper and Nelson",449,84.61,37989.89,2024-11-26,2024-11-30,Cancelled
+2520f81d-1015-4ee5-a8f7-d6f4e17790c1,Morning,Packaging,Rogers-Combs,349,472.87,165031.63,2024-09-10,2024-07-19,Ordered
+c18d4de2-6038-4beb-bd05-cca776407b81,Find,Packaging,"Roberts, Harper and Nelson",171,129.94,22219.74,2024-07-16,2024-09-09,Ordered
+1ab03ec5-05cd-4572-87ea-5676cd6be475,Dog,Packaging,Cherry PLC,432,494.12,213459.84,2024-07-20,2025-01-11,Cancelled
+bbc41702-ad05-447f-9160-f8acb7d09595,Rate,Packaging,"Henderson, Lynch and Nelson",106,261.63,27732.78,2024-11-12,2024-10-07,Cancelled
+7b7f4c78-3688-41ab-9112-d0289cd6a239,Career,Packaging,"Henderson, Lynch and Nelson",114,137.19,15639.66,2024-07-01,2024-08-14,Received
+e5d715d3-5b0b-4d51-a06b-59bcc9d68590,Though,Electronics,"Valenzuela, Butler and Little",460,350.63,161289.8,2025-01-19,2025-03-13,Ordered
+9aeae2fd-26b1-4aec-90b3-eb14f45a59a3,Generation,Raw Materials,"Boyd, Vasquez and Smith",419,123.45,51725.55,2025-01-09,2025-03-20,Received
+8ad2094c-a22e-4a62-ae0c-c5d9ca33ac26,Type,Electronics,Cherry PLC,17,278.36,4732.12,2025-03-07,2025-03-08,Ordered
+d113ca46-8e45-4acd-a6d1-9c431cf37ec0,Wife,Office Supplies,"Roberts, Harper and Nelson",246,473.8,116554.8,2024-06-17,2024-09-15,Received
+e10ef841-cf45-48b3-a370-11fdcc06680d,Situation,Packaging,Rogers-Combs,270,354.18,95628.6,2024-10-20,2024-10-13,Cancelled
+efb240c8-0b31-46b3-b03a-878944740021,Model,Packaging,"Valenzuela, Butler and Little",134,231.11,30968.74,2025-02-02,2024-07-06,Received
+dcb38b28-0ece-4723-9167-15e061e4a5ef,Effort,Packaging,Johnston LLC,481,301.69,145112.89,2024-05-27,2025-04-28,Received
+8978d8be-b336-4fcf-9303-9c90accda540,Each,Raw Materials,Rogers-Combs,405,396.05,160400.25,2024-11-26,2025-04-11,Cancelled
+f016405c-40a4-4186-a9fb-5270b14920ba,Lawyer,Electronics,Cherry PLC,146,411.17,60030.82,2025-01-06,2024-06-07,Pending
+e7e216e7-0722-403d-8f00-bf1b22bfafe9,Interview,Electronics,"Boyd, Vasquez and Smith",306,499.46,152834.76,2024-12-28,2024-09-16,Cancelled
+a5faac65-4b48-4835-ae0a-bc586d13d9ea,Tax,Office Supplies,"Valenzuela, Butler and Little",285,244.75,69753.75,2024-06-05,2025-04-27,Pending
+a5acf18d-50b0-415e-92f8-c62e5b286733,Far,Machinery,Cherry PLC,203,230.4,46771.2,2024-11-02,2024-10-31,Pending
+fb313f91-e513-4e1b-a7ac-b08198ded5a7,Example,Office Supplies,Johnston LLC,302,194.57,58760.14,2025-04-02,2025-01-13,Cancelled
+255ba332-73ff-47e1-ae01-9bc67d88e2b6,Determine,Raw Materials,Wells-Donovan,391,239.12,93495.92,2024-07-01,2024-07-06,Cancelled
+00c57bb4-3785-40f5-b07f-2efb29804536,Five,Packaging,Robbins-Morris,263,482.59,126921.17,2024-10-23,2024-11-18,Received
+6303cf7c-1759-4ab5-b056-82dc3457efe4,Occur,Machinery,"Boyd, Vasquez and Smith",179,435.5,77954.5,2025-02-20,2025-03-26,Cancelled
+ffdfd637-75d9-4964-b3b0-10b6a5de55f5,Candidate,Raw Materials,Cherry PLC,476,231.18,110041.68,2025-02-21,2025-01-11,Received

@@ -1,0 +1,260 @@
+{
+    "metrics": {
+        "total_operations": 200,
+        "avg_efficiency": 99.05309464726088,
+        "avg_quality_score": 99.05309464726088,
+        "avg_machine_utilization": 91.43684999999999
+    },
+    "distributions": {
+        "product_lines": {
+            "Tool D": 47,
+            "Component E": 45,
+            "Widget A": 41,
+            "Device C": 36,
+            "Gadget B": 31
+        },
+        "production_lines": {
+            "Line 3": 73,
+            "Line 1": 69,
+            "Line 2": 58
+        },
+        "shifts": {
+            "Night": 69,
+            "Evening": 66,
+            "Morning": 65
+        }
+    },
+    "trends": {
+        "4": 99.05577173570644,
+        "5": 98.94868819788374
+    },
+    "performance": {
+        "by_product": {
+            "Component E": 98.96250662781486,
+            "Device C": 99.07882381308883,
+            "Gadget B": 99.15866307781714,
+            "Tool D": 99.01036677969145,
+            "Widget A": 99.09908975296288
+        },
+        "by_line": {
+            "Line 1": 99.06192627689302,
+            "Line 2": 99.11021070368066,
+            "Line 3": 98.99936706209697
+        },
+        "by_shift": {
+            "Evening": 99.03522627823018,
+            "Morning": 99.08200355325506,
+            "Night": 99.04295310329572
+        }
+    },
+    "model_performance": {
+        "mse": 0.46162191019897214,
+        "r2": -0.5779821589589076
+    },
+    "analysis": {
+        "insights": [
+            "Average efficiency rate is 99.1%",
+            "Average quality score is 99.1%",
+            "Average machine utilization is 91.4%",
+            "Most efficient product is Gadget B"
+        ],
+        "recommendations": [
+            "Implement lean manufacturing principles across all production lines",
+            "Develop standardized operating procedures for common operations",
+            "Enhance quality control measures and training programs",
+            "Optimize shift scheduling based on performance metrics"
+        ]
+    },
+    "recent_operations": [
+        {
+            "Production_ID": "PROD200",
+            "Product_Name": "Component E",
+            "Units_Produced": 1254,
+            "Defective_Units": 5,
+            "Production_Line": "Line 1",
+            "Shift": "Morning",
+            "Start_Time": "07:00",
+            "End_Time": "15:00",
+            "Downtime_Minutes": 20,
+            "Machine_Utilization_%": 96.98,
+            "Labor_Hours": 16,
+            "Supervisor": "Susan T.",
+            "Date": "2024-05-01",
+            "Efficiency_Rate": 99.6012759170654,
+            "Quality_Score": 99.6012759170654,
+            "Month": 5,
+            "Day_of_Week": 2
+        },
+        {
+            "Production_ID": "PROD142",
+            "Product_Name": "Device C",
+            "Units_Produced": 1084,
+            "Defective_Units": 20,
+            "Production_Line": "Line 3",
+            "Shift": "Morning",
+            "Start_Time": "07:00",
+            "End_Time": "15:00",
+            "Downtime_Minutes": 17,
+            "Machine_Utilization_%": 94.39,
+            "Labor_Hours": 13,
+            "Supervisor": "Ali K.",
+            "Date": "2024-05-01",
+            "Efficiency_Rate": 98.1549815498155,
+            "Quality_Score": 98.1549815498155,
+            "Month": 5,
+            "Day_of_Week": 2
+        },
+        {
+            "Production_ID": "PROD069",
+            "Product_Name": "Tool D",
+            "Units_Produced": 951,
+            "Defective_Units": 16,
+            "Production_Line": "Line 1",
+            "Shift": "Evening",
+            "Start_Time": "15:00",
+            "End_Time": "23:00",
+            "Downtime_Minutes": 13,
+            "Machine_Utilization_%": 97.74,
+            "Labor_Hours": 16,
+            "Supervisor": "Susan T.",
+            "Date": "2024-05-01",
+            "Efficiency_Rate": 98.31756046267087,
+            "Quality_Score": 98.31756046267087,
+            "Month": 5,
+            "Day_of_Week": 2
+        },
+        {
+            "Production_ID": "PROD107",
+            "Product_Name": "Device C",
+            "Units_Produced": 902,
+            "Defective_Units": 12,
+            "Production_Line": "Line 3",
+            "Shift": "Evening",
+            "Start_Time": "15:00",
+            "End_Time": "23:00",
+            "Downtime_Minutes": 4,
+            "Machine_Utilization_%": 86.12,
+            "Labor_Hours": 14,
+            "Supervisor": "David N.",
+            "Date": "2024-05-01",
+            "Efficiency_Rate": 98.66962305986696,
+            "Quality_Score": 98.66962305986696,
+            "Month": 5,
+            "Day_of_Week": 2
+        },
+        {
+            "Production_ID": "PROD124",
+            "Product_Name": "Gadget B",
+            "Units_Produced": 1352,
+            "Defective_Units": 0,
+            "Production_Line": "Line 2",
+            "Shift": "Night",
+            "Start_Time": "22:00",
+            "End_Time": "06:00",
+            "Downtime_Minutes": 11,
+            "Machine_Utilization_%": 86.39,
+            "Labor_Hours": 14,
+            "Supervisor": "Maria G.",
+            "Date": "2024-05-01",
+            "Efficiency_Rate": 100.0,
+            "Quality_Score": 100.0,
+            "Month": 5,
+            "Day_of_Week": 2
+        },
+        {
+            "Production_ID": "PROD032",
+            "Product_Name": "Gadget B",
+            "Units_Produced": 1409,
+            "Defective_Units": 8,
+            "Production_Line": "Line 1",
+            "Shift": "Morning",
+            "Start_Time": "07:00",
+            "End_Time": "15:00",
+            "Downtime_Minutes": 27,
+            "Machine_Utilization_%": 93.5,
+            "Labor_Hours": 15,
+            "Supervisor": "Maria G.",
+            "Date": "2024-04-30",
+            "Efficiency_Rate": 99.43222143364088,
+            "Quality_Score": 99.43222143364088,
+            "Month": 4,
+            "Day_of_Week": 1
+        },
+        {
+            "Production_ID": "PROD081",
+            "Product_Name": "Device C",
+            "Units_Produced": 1438,
+            "Defective_Units": 3,
+            "Production_Line": "Line 3",
+            "Shift": "Morning",
+            "Start_Time": "07:00",
+            "End_Time": "15:00",
+            "Downtime_Minutes": 27,
+            "Machine_Utilization_%": 94.42,
+            "Labor_Hours": 15,
+            "Supervisor": "Ali K.",
+            "Date": "2024-04-30",
+            "Efficiency_Rate": 99.79137691237831,
+            "Quality_Score": 99.79137691237831,
+            "Month": 4,
+            "Day_of_Week": 1
+        },
+        {
+            "Production_ID": "PROD093",
+            "Product_Name": "Component E",
+            "Units_Produced": 1064,
+            "Defective_Units": 4,
+            "Production_Line": "Line 2",
+            "Shift": "Night",
+            "Start_Time": "22:00",
+            "End_Time": "06:00",
+            "Downtime_Minutes": 12,
+            "Machine_Utilization_%": 91.07,
+            "Labor_Hours": 14,
+            "Supervisor": "Ali K.",
+            "Date": "2024-04-30",
+            "Efficiency_Rate": 99.62406015037594,
+            "Quality_Score": 99.62406015037594,
+            "Month": 4,
+            "Day_of_Week": 1
+        },
+        {
+            "Production_ID": "PROD120",
+            "Product_Name": "Widget A",
+            "Units_Produced": 1373,
+            "Defective_Units": 8,
+            "Production_Line": "Line 1",
+            "Shift": "Evening",
+            "Start_Time": "15:00",
+            "End_Time": "23:00",
+            "Downtime_Minutes": 17,
+            "Machine_Utilization_%": 93.44,
+            "Labor_Hours": 13,
+            "Supervisor": "John M.",
+            "Date": "2024-04-30",
+            "Efficiency_Rate": 99.41733430444283,
+            "Quality_Score": 99.41733430444283,
+            "Month": 4,
+            "Day_of_Week": 1
+        },
+        {
+            "Production_ID": "PROD045",
+            "Product_Name": "Tool D",
+            "Units_Produced": 922,
+            "Defective_Units": 7,
+            "Production_Line": "Line 3",
+            "Shift": "Morning",
+            "Start_Time": "07:00",
+            "End_Time": "15:00",
+            "Downtime_Minutes": 19,
+            "Machine_Utilization_%": 96.8,
+            "Labor_Hours": 12,
+            "Supervisor": "David N.",
+            "Date": "2024-04-30",
+            "Efficiency_Rate": 99.24078091106291,
+            "Quality_Score": 99.24078091106291,
+            "Month": 4,
+            "Day_of_Week": 1
+        }
+    ]
+}

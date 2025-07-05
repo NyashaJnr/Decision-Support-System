@@ -1,0 +1,201 @@
+Employee ID,Employee Name,Role,Date of Entry,Number of Deliveries per Week,Average Delivery Time (hrs),Vehicle Type,Vehicle Condition Score,Fuel Consumption (L/week),Maintenance Cost ($/month),On-time Delivery Rate (%),Incidents Reported,Shift
+TL1000,Matthew King,Warehouse Staff,2023-11-07,46,7.82,None,6,42.1,368.29,88.15,4,Rotational
+TL1001,Richard Jones,Logistics Coordinator,2024-02-21,45,6.73,Truck,2,100.9,481.63,71.19,1,Evening
+TL1002,Melissa Campbell,Driver,2023-08-03,43,5.3,Motorbike,2,45.4,659.25,72.18,4,Rotational
+TL1003,Bobby Andrews,Warehouse Staff,2024-04-16,6,5.5,None,6,29.1,548.1,94.14,4,Evening
+TL1004,Desiree Spence,Fleet Manager,2024-03-05,8,1.18,Van,5,190.2,894.8,87.63,1,Evening
+TL1005,Christian Riley,Fleet Manager,2022-08-07,55,7.5,None,5,175.5,177.49,90.14,5,Rotational
+TL1006,Heidi Schaefer,Dispatch Officer,2025-01-06,26,6.81,Bicycle,8,95.3,529.0,76.51,3,Rotational
+TL1007,Austin Johnson,Warehouse Staff,2023-09-08,20,2.87,Van,10,193.3,309.2,76.27,1,Morning
+TL1008,Edwin Carrillo,Driver,2022-12-15,13,2.26,Van,7,182.4,818.37,97.21,1,Evening
+TL1009,Kelly Maldonado,Fleet Manager,2023-06-15,55,5.92,Van,3,166.4,364.15,79.1,2,Rotational
+TL1010,Ashley Taylor,Dispatch Officer,2024-01-20,41,3.16,None,8,188.1,744.56,97.27,2,Rotational
+TL1011,Kelly Lee,Warehouse Staff,2023-11-19,18,3.38,Van,6,149.8,665.87,76.35,2,Rotational
+TL1012,Jennifer Henderson,Fleet Manager,2025-01-02,9,1.04,Bicycle,8,54.2,732.67,75.7,3,Morning
+TL1013,Matthew Myers,Warehouse Staff,2023-05-13,58,7.09,Truck,1,48.7,63.38,92.24,1,Evening
+TL1014,Debra Martinez,Dispatch Officer,2023-07-07,53,4.96,Bicycle,6,199.3,370.26,92.41,0,Evening
+TL1015,Steven Brown,Driver,2024-12-25,40,3.81,Motorbike,10,104.0,330.27,92.63,1,Night
+TL1016,Cynthia Massey,Dispatch Officer,2024-04-01,18,1.99,Van,7,178.2,690.68,97.43,3,Morning
+TL1017,Cindy Sosa,Driver,2025-01-18,42,5.43,Bicycle,5,109.5,233.5,90.87,2,Morning
+TL1018,Tony Morris,Logistics Coordinator,2023-10-09,18,1.21,None,1,36.2,630.41,91.11,3,Evening
+TL1019,Keith Hopkins,Fleet Manager,2023-03-20,57,6.22,Motorbike,2,90.8,656.79,81.9,2,Night
+TL1020,Terry Beck,Logistics Coordinator,2022-09-04,60,2.51,Bicycle,7,102.3,435.22,77.18,3,Night
+TL1021,Lisa Meyers,Driver,2022-11-22,19,3.94,Van,6,63.3,456.32,79.65,0,Evening
+TL1022,Steven Simmons DDS,Warehouse Staff,2024-12-16,26,3.39,None,9,125.0,361.53,78.49,2,Rotational
+TL1023,Joshua Kennedy,Driver,2025-04-15,54,3.59,Van,3,28.8,430.79,83.99,2,Morning
+TL1024,Sheila Robertson,Driver,2024-08-29,14,6.05,Motorbike,1,70.6,140.62,89.46,1,Night
+TL1025,Chad Davenport,Warehouse Staff,2024-10-12,55,6.44,Bicycle,3,127.6,982.6,79.25,5,Rotational
+TL1026,Jonathan Hughes,Logistics Coordinator,2023-11-16,43,4.97,Van,10,171.7,503.58,80.79,5,Night
+TL1027,Jonathan Jones,Fleet Manager,2024-02-19,5,1.59,Motorbike,8,141.1,939.03,96.48,3,Rotational
+TL1028,Joyce Christensen,Driver,2024-10-01,22,1.37,None,1,71.4,56.49,83.98,4,Rotational
+TL1029,Darrell Munoz PhD,Driver,2024-04-11,59,2.1,Bicycle,3,21.5,414.4,94.08,4,Morning
+TL1030,Thomas Martin,Fleet Manager,2023-04-29,14,5.32,Bicycle,2,39.3,474.4,91.67,1,Night
+TL1031,Alexandria Chen,Driver,2024-07-22,13,5.72,Motorbike,4,44.1,303.64,92.85,3,Night
+TL1032,Pamela Pope,Fleet Manager,2024-03-18,39,2.9,Bicycle,6,67.6,363.14,79.61,0,Rotational
+TL1033,Benjamin Smith,Fleet Manager,2024-01-25,21,5.63,None,6,85.8,603.34,76.09,1,Evening
+TL1034,Brian Bridges,Fleet Manager,2023-07-20,56,4.4,None,7,92.6,594.23,79.39,2,Night
+TL1035,Brooke Blair,Warehouse Staff,2023-12-11,16,4.09,Bicycle,10,28.1,298.48,71.37,0,Morning
+TL1036,Adam Jackson,Logistics Coordinator,2023-02-03,12,2.91,Van,1,29.2,391.57,95.92,3,Evening
+TL1037,Luis Jones,Logistics Coordinator,2024-04-11,47,6.28,Van,10,121.1,274.49,92.24,2,Night
+TL1038,Mitchell Ali,Dispatch Officer,2023-06-29,60,1.8,None,3,85.3,684.4,70.49,4,Morning
+TL1039,Luke Smith,Warehouse Staff,2023-02-02,6,4.01,Van,8,71.9,492.13,86.6,3,Evening
+TL1040,Christopher Klein,Dispatch Officer,2022-08-21,13,2.98,Motorbike,6,89.5,201.73,87.52,2,Night
+TL1041,Kathleen Schwartz,Logistics Coordinator,2023-06-16,5,5.75,Truck,6,101.1,701.77,91.6,3,Morning
+TL1042,Gloria Burke,Logistics Coordinator,2023-09-23,27,4.41,Bicycle,8,119.0,926.95,78.86,2,Evening
+TL1043,Roberta Jenkins,Logistics Coordinator,2022-10-04,55,5.67,Motorbike,2,168.6,893.41,75.89,3,Night
+TL1044,Heather Lindsey,Driver,2023-09-13,55,1.32,None,10,132.2,781.35,76.9,5,Evening
+TL1045,Catherine Merritt,Dispatch Officer,2024-06-09,20,3.77,Truck,3,130.0,705.78,87.09,4,Rotational
+TL1046,Claire Ramirez,Warehouse Staff,2023-06-10,42,5.2,None,9,43.2,656.78,77.37,1,Rotational
+TL1047,Sandra Young,Dispatch Officer,2024-11-16,25,1.05,Truck,6,37.4,943.6,86.52,2,Evening
+TL1048,Amber Harper,Logistics Coordinator,2023-04-11,6,3.11,Motorbike,7,87.2,399.17,98.3,2,Rotational
+TL1049,Dana Wood,Warehouse Staff,2022-11-29,16,2.48,Truck,6,197.6,259.81,80.13,4,Rotational
+TL1050,Kyle Swanson,Dispatch Officer,2024-01-03,21,1.96,Van,5,120.4,959.49,92.9,5,Evening
+TL1051,Nicole Kelley,Logistics Coordinator,2024-07-03,8,2.79,Motorbike,4,85.8,504.27,84.66,1,Rotational
+TL1052,Tamara Bryan,Logistics Coordinator,2023-02-25,13,3.3,Bicycle,2,46.0,482.23,91.71,3,Evening
+TL1053,Ronald Petersen,Warehouse Staff,2024-05-12,52,1.05,None,1,128.4,989.4,92.19,2,Evening
+TL1054,Wayne Edwards,Fleet Manager,2024-11-11,31,6.23,Van,3,92.2,404.94,83.82,1,Rotational
+TL1055,Nicholas Edwards,Warehouse Staff,2024-05-25,38,2.23,Bicycle,8,27.2,716.84,91.98,3,Night
+TL1056,Tracy Wiley,Fleet Manager,2023-12-31,12,3.66,Truck,9,27.0,917.16,80.57,2,Evening
+TL1057,Brian Burton,Driver,2024-03-10,52,5.93,Van,7,148.4,769.48,74.2,2,Evening
+TL1058,Shelley Sanchez,Warehouse Staff,2024-06-13,9,4.5,Bicycle,9,164.7,811.9,86.4,5,Night
+TL1059,Sherri Ray,Fleet Manager,2023-05-09,35,6.83,Motorbike,2,113.5,834.32,75.52,5,Rotational
+TL1060,Misty Strickland,Dispatch Officer,2024-04-01,33,6.64,Truck,5,46.8,773.77,96.68,5,Morning
+TL1061,Stephanie Harrison,Logistics Coordinator,2023-04-22,54,1.5,Bicycle,5,180.8,696.32,99.71,3,Night
+TL1062,Bradley Cain,Driver,2024-01-10,28,7.03,Truck,8,45.2,616.02,98.72,4,Morning
+TL1063,Crystal Smith,Warehouse Staff,2025-02-05,37,1.3,Bicycle,4,187.6,798.0,85.72,1,Rotational
+TL1064,Allen Kennedy,Fleet Manager,2022-06-18,42,1.13,None,10,77.3,549.23,95.17,2,Evening
+TL1065,Mary Randall,Dispatch Officer,2023-06-16,11,7.45,Motorbike,5,90.7,551.76,72.23,3,Evening
+TL1066,Angela Haney,Fleet Manager,2022-07-24,33,7.03,Van,8,131.0,393.7,94.54,2,Rotational
+TL1067,Deborah Barajas,Warehouse Staff,2022-06-02,37,5.03,Bicycle,4,171.7,921.38,71.46,3,Rotational
+TL1068,Danielle Lopez,Fleet Manager,2023-03-06,19,5.01,Truck,2,126.9,156.6,70.19,2,Rotational
+TL1069,Jessica Martinez,Warehouse Staff,2024-05-02,44,5.97,Motorbike,3,111.3,837.34,74.12,0,Rotational
+TL1070,Sarah Woods,Fleet Manager,2022-12-03,7,3.92,Van,2,111.7,907.74,88.92,4,Rotational
+TL1071,Donna Reynolds,Logistics Coordinator,2022-11-16,51,1.81,Truck,8,108.2,242.05,72.04,1,Rotational
+TL1072,Brenda Evans,Warehouse Staff,2023-06-05,55,1.15,Motorbike,3,121.3,559.83,74.53,4,Rotational
+TL1073,Billy Hunter,Warehouse Staff,2024-09-23,60,3.27,Truck,8,105.5,206.31,76.56,4,Evening
+TL1074,Alexander Schmidt,Driver,2024-04-22,47,6.61,Motorbike,2,23.0,861.76,83.68,1,Morning
+TL1075,Audrey Graham,Logistics Coordinator,2024-03-08,38,5.33,Van,6,79.6,469.75,71.81,5,Morning
+TL1076,Alexandria Kelly,Warehouse Staff,2022-07-01,24,6.82,Van,6,39.7,696.28,89.13,4,Evening
+TL1077,Alexander Manning,Dispatch Officer,2023-03-04,34,7.44,Truck,2,95.0,731.07,98.02,0,Night
+TL1078,Michelle Kaiser,Fleet Manager,2023-01-07,46,1.62,Motorbike,9,75.4,514.39,97.38,5,Morning
+TL1079,Sara Whitaker,Dispatch Officer,2023-11-15,6,6.91,Bicycle,9,181.8,903.94,89.78,3,Night
+TL1080,Charles Aguilar,Fleet Manager,2022-06-24,8,2.7,Van,5,177.0,473.21,70.47,5,Evening
+TL1081,Jennifer Skinner,Fleet Manager,2023-12-13,35,5.12,Bicycle,5,133.3,102.85,85.97,1,Night
+TL1082,Tammy Lee,Driver,2023-12-25,59,4.67,Bicycle,3,127.4,175.35,82.34,3,Evening
+TL1083,Mr. Adrian Lawrence Jr.,Warehouse Staff,2024-09-21,30,3.77,None,3,67.8,444.65,70.5,2,Rotational
+TL1084,Cole King,Fleet Manager,2024-02-08,32,3.17,Truck,6,138.0,585.72,91.67,5,Rotational
+TL1085,Gary Peterson,Driver,2025-03-13,48,3.38,Truck,9,195.0,580.86,86.07,0,Morning
+TL1086,Carl Warren,Dispatch Officer,2025-01-26,11,3.33,Truck,4,124.1,689.13,78.6,3,Morning
+TL1087,Dylan Archer,Driver,2025-01-03,36,2.18,Motorbike,2,61.0,342.76,85.07,5,Night
+TL1088,Juan Long,Dispatch Officer,2023-05-29,50,4.57,Van,4,29.2,70.68,90.94,3,Night
+TL1089,Samantha Carlson,Warehouse Staff,2023-09-17,33,1.8,Van,3,106.5,291.73,82.92,1,Morning
+TL1090,Steven Rangel,Fleet Manager,2023-08-30,9,4.57,None,4,114.4,52.86,98.19,5,Rotational
+TL1091,Krystal Knight,Logistics Coordinator,2023-08-21,10,7.34,None,8,149.8,257.01,75.38,2,Evening
+TL1092,Kelly Brown,Dispatch Officer,2023-02-01,25,3.45,None,1,159.4,119.38,97.54,1,Rotational
+TL1093,Michael Fowler,Fleet Manager,2024-06-02,43,6.09,Bicycle,6,88.4,452.51,85.73,2,Morning
+TL1094,Jacob Christian,Logistics Coordinator,2025-02-14,14,6.73,Truck,9,167.9,715.37,77.23,5,Evening
+TL1095,Alicia Riley,Logistics Coordinator,2023-04-29,9,6.71,Motorbike,10,63.6,564.11,88.59,1,Night
+TL1096,Paul Moreno,Dispatch Officer,2024-10-17,13,2.65,Van,6,123.1,107.24,77.57,5,Morning
+TL1097,Kimberly Krueger,Fleet Manager,2022-05-15,22,2.03,Motorbike,8,146.1,899.51,80.63,3,Rotational
+TL1098,Paul Nelson,Logistics Coordinator,2022-07-09,44,2.38,Truck,9,54.3,986.83,93.85,3,Night
+TL1099,Isaac Bryant,Driver,2023-08-14,45,5.22,Truck,3,99.4,498.47,72.37,0,Night
+TL1100,Hannah Cameron,Driver,2023-06-11,42,6.32,Van,10,95.4,322.74,98.78,3,Morning
+TL1101,Brian Jones,Fleet Manager,2024-11-25,40,5.59,Bicycle,2,94.3,220.98,83.77,4,Rotational
+TL1102,Christopher Perez,Warehouse Staff,2025-02-20,50,2.24,None,2,56.7,178.66,77.3,3,Morning
+TL1103,Donald Scott,Driver,2025-04-03,25,6.41,Bicycle,5,110.3,659.45,90.92,4,Evening
+TL1104,James Bray,Dispatch Officer,2024-08-20,29,4.46,Truck,7,130.1,742.83,79.0,3,Evening
+TL1105,Matthew Graves,Fleet Manager,2023-12-23,43,6.28,Truck,8,104.9,965.59,94.84,4,Night
+TL1106,Mark Nielsen,Logistics Coordinator,2024-11-19,38,6.32,Bicycle,9,172.7,405.74,72.42,4,Rotational
+TL1107,Morgan King,Driver,2023-03-07,23,4.14,None,7,150.9,896.77,99.75,5,Evening
+TL1108,Summer Coleman,Fleet Manager,2023-10-09,34,7.47,None,7,147.0,476.11,89.5,3,Evening
+TL1109,Glenn Lang,Fleet Manager,2024-11-12,37,4.95,Truck,10,113.4,921.26,70.95,4,Evening
+TL1110,Dr. Cheryl Kim DVM,Warehouse Staff,2024-02-05,43,5.45,None,2,121.0,408.62,82.16,0,Evening
+TL1111,Jennifer Thompson,Logistics Coordinator,2024-09-10,32,5.37,None,3,199.7,126.24,81.32,2,Morning
+TL1112,Bradley Macias,Logistics Coordinator,2023-10-18,11,7.05,Van,6,106.1,965.94,84.28,5,Night
+TL1113,David Ross MD,Logistics Coordinator,2023-06-05,55,5.39,Van,2,87.8,880.83,89.1,4,Night
+TL1114,Stacy Hood,Dispatch Officer,2023-10-17,49,2.06,Motorbike,8,192.2,176.34,91.09,4,Evening
+TL1115,Allen Durham,Fleet Manager,2023-10-05,12,1.48,Bicycle,8,102.7,867.27,72.48,5,Night
+TL1116,Patrick Cooper,Dispatch Officer,2025-04-30,59,4.1,Truck,9,116.0,162.7,95.36,0,Night
+TL1117,Christopher Fields,Dispatch Officer,2023-12-15,46,3.12,None,6,118.3,993.2,89.35,0,Night
+TL1118,Mary Hunter,Fleet Manager,2022-11-28,46,2.92,Motorbike,3,141.7,423.41,79.94,1,Night
+TL1119,Jacob Hartman,Logistics Coordinator,2023-01-22,54,1.39,Van,9,176.2,170.98,99.32,5,Morning
+TL1120,Meghan Williams,Fleet Manager,2025-03-18,40,4.55,None,10,142.5,979.79,99.22,5,Evening
+TL1121,Brian Smith,Warehouse Staff,2024-07-03,51,3.17,Bicycle,3,164.7,843.08,96.84,2,Rotational
+TL1122,Jason Park,Fleet Manager,2022-10-01,60,4.16,Van,3,67.6,768.37,97.57,1,Morning
+TL1123,Courtney Santos,Fleet Manager,2025-03-29,18,1.4,Truck,7,107.2,979.57,76.89,5,Night
+TL1124,Jean Bell,Driver,2022-06-11,32,6.82,None,9,192.3,489.85,97.04,4,Evening
+TL1125,Colton Mckay,Warehouse Staff,2024-12-19,33,1.54,Motorbike,1,70.2,733.14,90.77,0,Evening
+TL1126,Andrew Davis,Driver,2022-06-27,19,7.05,Truck,2,73.7,452.92,87.0,4,Evening
+TL1127,Scott Kim,Logistics Coordinator,2023-07-25,31,6.99,None,9,189.5,410.31,78.13,5,Evening
+TL1128,Sara Phillips,Logistics Coordinator,2025-01-19,26,5.31,None,3,196.8,268.18,97.72,5,Night
+TL1129,Michael West,Warehouse Staff,2025-02-10,57,4.55,None,5,158.8,487.59,90.53,5,Evening
+TL1130,Brandon Chang,Dispatch Officer,2024-08-10,34,4.24,None,3,146.9,197.37,78.41,3,Rotational
+TL1131,Daniel Castillo,Fleet Manager,2025-03-10,30,4.88,None,3,144.2,229.06,86.29,2,Rotational
+TL1132,Jennifer Gonzalez,Driver,2022-10-28,31,6.54,Truck,6,108.0,881.45,89.74,3,Evening
+TL1133,William Schmidt,Warehouse Staff,2025-04-23,51,7.27,Bicycle,4,106.4,777.22,75.38,0,Night
+TL1134,Dalton Scott,Driver,2023-04-08,11,4.15,Bicycle,6,120.9,80.61,95.51,0,Rotational
+TL1135,Ashley Blackwell,Fleet Manager,2024-05-15,25,6.67,Truck,9,188.2,677.19,70.47,0,Rotational
+TL1136,Stephanie Smith,Dispatch Officer,2024-05-27,32,5.56,Bicycle,5,149.9,634.18,76.21,2,Rotational
+TL1137,Miguel Howard,Driver,2024-09-02,25,3.25,Motorbike,2,71.8,939.43,74.33,1,Morning
+TL1138,Paul Cooper,Warehouse Staff,2022-11-03,47,4.33,Motorbike,5,123.2,894.59,94.62,4,Morning
+TL1139,Theresa Parker,Fleet Manager,2022-07-05,21,2.06,Truck,4,117.8,278.63,94.63,5,Rotational
+TL1140,Sean Adams,Fleet Manager,2023-12-17,28,1.43,Motorbike,9,181.2,113.93,97.87,4,Night
+TL1141,Mr. Brandon Lara,Dispatch Officer,2024-02-14,14,1.72,Truck,5,91.0,614.25,78.98,4,Night
+TL1142,Donald Brown,Warehouse Staff,2024-09-11,48,7.29,Motorbike,3,82.1,474.12,86.92,4,Rotational
+TL1143,Alexis Miller,Fleet Manager,2024-09-03,35,3.4,Van,5,159.2,688.42,87.0,5,Rotational
+TL1144,Linda Horne,Driver,2022-11-13,9,6.0,Truck,10,46.4,878.6,95.48,4,Night
+TL1145,Larry Huynh,Logistics Coordinator,2024-07-25,10,4.53,None,9,27.6,282.5,90.31,1,Morning
+TL1146,John Tucker,Warehouse Staff,2023-01-07,58,2.21,Motorbike,2,192.0,92.02,86.22,3,Morning
+TL1147,Mark Delgado,Driver,2024-12-21,10,2.73,Van,9,34.2,467.01,81.52,2,Rotational
+TL1148,Carmen White,Dispatch Officer,2023-10-17,10,4.06,Truck,3,186.3,562.77,92.19,3,Night
+TL1149,Jennifer Wiley,Dispatch Officer,2023-05-25,32,4.08,Motorbike,10,138.1,766.67,93.71,3,Morning
+TL1150,Tracy Rowe,Fleet Manager,2024-11-24,11,4.66,None,10,154.5,787.26,90.68,5,Rotational
+TL1151,Annette Robertson,Dispatch Officer,2025-02-01,52,2.11,Motorbike,3,58.5,183.13,72.35,4,Evening
+TL1152,Angela Floyd,Logistics Coordinator,2024-03-12,52,3.61,Van,3,169.0,993.81,92.36,5,Rotational
+TL1153,Shannon Wilson,Driver,2022-07-28,28,2.98,Bicycle,10,68.8,272.45,80.38,4,Evening
+TL1154,Tricia Franco,Warehouse Staff,2024-10-09,56,3.86,Bicycle,10,121.2,920.58,72.93,1,Rotational
+TL1155,Brittany Burke,Fleet Manager,2022-05-15,13,3.37,Van,6,68.9,597.3,76.96,2,Night
+TL1156,David Mcpherson,Warehouse Staff,2022-12-27,40,5.19,Van,10,39.7,598.6,72.28,0,Night
+TL1157,Maria Reed,Driver,2022-12-11,8,6.52,Truck,1,153.4,783.91,88.16,3,Night
+TL1158,Gregory Stone,Logistics Coordinator,2024-02-27,42,5.53,Bicycle,1,63.1,827.46,88.42,0,Night
+TL1159,Richard Stewart,Driver,2022-07-23,40,1.46,Truck,2,29.1,275.06,87.87,2,Evening
+TL1160,Collin Booth,Driver,2022-12-06,40,1.66,Motorbike,1,182.9,882.45,99.07,3,Rotational
+TL1161,Marc Clark,Fleet Manager,2023-05-06,26,5.75,Van,10,60.6,986.41,79.79,0,Night
+TL1162,Thomas Doyle,Warehouse Staff,2023-04-15,47,2.99,Truck,5,61.9,545.19,89.02,0,Morning
+TL1163,Kristin Hubbard,Driver,2024-02-29,12,6.07,Van,4,38.0,442.88,93.51,5,Morning
+TL1164,Sandra Burch,Driver,2024-04-18,31,5.6,Truck,10,79.5,311.4,83.52,1,Morning
+TL1165,William Castillo,Logistics Coordinator,2024-07-07,27,7.34,Motorbike,7,105.0,578.88,76.84,2,Rotational
+TL1166,Samuel Freeman,Dispatch Officer,2022-10-22,60,7.11,Motorbike,10,142.6,612.08,86.59,2,Morning
+TL1167,Heather Johnson,Logistics Coordinator,2023-10-23,47,3.33,None,1,44.7,748.45,81.26,2,Morning
+TL1168,Laurie Williams,Warehouse Staff,2022-11-06,53,5.08,Bicycle,8,193.6,216.38,75.57,3,Evening
+TL1169,Breanna Jackson,Warehouse Staff,2024-04-18,32,1.99,None,9,196.0,694.81,87.58,1,Rotational
+TL1170,Katherine Kaiser,Fleet Manager,2023-02-28,60,3.45,Bicycle,5,48.4,578.06,81.4,4,Rotational
+TL1171,William Price,Dispatch Officer,2022-09-26,51,7.77,Motorbike,5,137.5,94.54,93.17,3,Morning
+TL1172,Joshua Hughes,Warehouse Staff,2022-09-21,8,5.89,Truck,8,178.5,377.19,78.86,2,Rotational
+TL1173,Tammy Williamson,Dispatch Officer,2023-01-03,23,3.74,Van,4,105.6,661.15,77.39,3,Evening
+TL1174,Antonio Miller,Logistics Coordinator,2023-10-13,43,5.17,Motorbike,7,137.1,412.1,72.21,0,Evening
+TL1175,Christopher Williams,Warehouse Staff,2025-02-25,24,7.57,Motorbike,5,156.1,548.24,78.04,3,Night
+TL1176,Eric Velasquez,Driver,2024-03-06,27,3.17,Truck,8,71.7,711.49,81.4,5,Evening
+TL1177,Andrew Abbott,Warehouse Staff,2023-01-23,11,3.64,Motorbike,2,71.4,437.85,93.52,5,Night
+TL1178,Howard Tyler,Dispatch Officer,2023-01-06,41,6.54,Motorbike,1,30.6,334.89,74.63,3,Morning
+TL1179,Harry Stokes,Warehouse Staff,2023-01-06,37,6.69,Truck,3,158.4,224.69,81.69,2,Night
+TL1180,Curtis Deleon,Fleet Manager,2023-06-10,18,5.69,Motorbike,8,137.4,561.03,80.82,0,Night
+TL1181,Daniel Flowers,Driver,2023-08-15,14,6.8,Bicycle,7,61.8,278.92,72.75,2,Morning
+TL1182,Timothy Green,Fleet Manager,2025-01-24,47,6.17,Bicycle,8,153.0,264.08,98.29,0,Night
+TL1183,Alexander Sellers,Logistics Coordinator,2024-08-17,35,5.8,Bicycle,8,173.1,864.66,83.34,5,Evening
+TL1184,Francis Martin,Warehouse Staff,2024-10-20,19,4.68,Bicycle,4,26.7,187.13,92.84,0,Morning
+TL1185,Rhonda Nguyen,Warehouse Staff,2024-09-11,59,5.52,Motorbike,6,185.9,489.87,73.07,0,Rotational
+TL1186,Richard Perkins,Logistics Coordinator,2023-07-06,11,3.96,Van,10,95.2,104.74,72.62,2,Night
+TL1187,Tara Foster,Fleet Manager,2024-08-25,27,3.53,Bicycle,3,170.8,442.04,82.93,5,Evening
+TL1188,Jacqueline Washington,Driver,2022-10-31,59,3.54,Bicycle,6,188.1,445.68,86.71,0,Rotational
+TL1189,Nicholas Garcia,Fleet Manager,2025-02-19,40,2.26,Motorbike,6,26.5,553.49,85.37,5,Morning
+TL1190,Todd Campbell,Dispatch Officer,2022-11-03,28,2.5,None,6,170.5,419.0,73.1,1,Morning
+TL1191,Sara Woodward,Fleet Manager,2025-05-05,12,7.63,Motorbike,7,161.8,292.25,72.69,5,Morning
+TL1192,Hannah Harris,Driver,2023-06-12,53,4.4,Truck,3,53.5,363.75,86.63,1,Evening
+TL1193,Valerie Thompson,Warehouse Staff,2022-06-24,22,2.59,Bicycle,6,154.8,125.12,87.91,4,Rotational
+TL1194,Dalton Villarreal,Fleet Manager,2023-01-20,41,1.96,Truck,9,177.0,477.3,93.53,1,Morning
+TL1195,Sheri Johnson,Logistics Coordinator,2022-06-05,19,1.54,Bicycle,9,72.1,402.52,95.91,4,Evening
+TL1196,Mrs. Maria Smith MD,Driver,2024-10-12,56,6.91,None,2,26.7,558.85,70.37,1,Evening
+TL1197,Lori Campbell,Warehouse Staff,2023-02-23,32,1.71,Van,6,73.7,837.94,82.41,2,Rotational
+TL1198,Rebekah Johnston,Driver,2024-09-15,59,6.4,None,4,128.5,98.96,93.38,4,Morning
+TL1199,Kimberly Snyder,Logistics Coordinator,2023-03-10,40,6.85,Motorbike,8,187.1,408.31,91.75,3,Morning
